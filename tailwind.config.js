@@ -13,6 +13,8 @@ export default {
 
       xl: '1280px',
 
+      '1xl': '1440px',
+
       '2xl': '1700px'
     }
   },

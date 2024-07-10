@@ -1,60 +1,83 @@
 <template>
   <header></header>
-  <div ref="wid" class="container mx-auto bg-white-400  mt-32 overflow-hidden">
-    <div class="relative min-hh-[66vh]">
-      <div class="flex relative transition-transform duration-500 h-full"
-        :style="`width:${nextWidth}px; transform: translateX(-${next}px);`">
-        <div class="h-full">
-          <picture>
-            <!-- <img class="h-full md:hidden block" src="./assets/images/d22.jpg"> -->
-
-            <img class="h-full " src="./assets/images/d1.jpg">
-          </picture>
+  <MainSlid />
+  <!-- Slider For Services  -->
+  <div class="container mx-auto my-40 overflow-hidden">
+    <!-- Content and images container -->
+    <!-- <div ref="wid" class="flex"
+      :style="{ transform: `translateX(-${next.value}px)`, transition: 'transform 0.5s ease' }">
+      <div class="flex-shrink-0 w-full grid grid-cols-2">
+        <div class="ltr:pr-24 rtl:pl-24">
+          <p class="font-bold text-2xl pb-8">To make The title more convincing</p>
+          <p class="leading-loose text-justify">
+            Green hydrogen is particularly vulnerable to price shocks from critical
+            minerals, but this risk is largely overlooked by its developers. Explore
+            mitigation strategies in a new Ramboll whitepaper. This risk is largely
+            overlooked by its developers. Explore mitigation strategies in a new Ramboll
+            whitepaper. This risk is largely overlooked by its developers. Explore
+            mitigation strategies in a new Ramboll whitepaper.
+          </p>
         </div>
-        <div class="h-full">
-          <picture>
-            <img class="h-full" src="./assets/images/d2.jpg">
-          </picture>
-        </div>
-        <div class="h-full">
-          <picture>
-            <img class="h-full" src="./assets/images/d22.jpg">
-
-            <!-- <img class="h-full" src="./assets/images/d1.jpg"> -->
+        <div class="min-w-[1600px]">
+          <picture class="mx-2">
+            <img src="./assets/images/d1.jpg" alt="">
           </picture>
         </div>
       </div>
-      <div class="absolute bottom-0 flex">
-        <div :class="{ 'with-before': afterelement == 0, 'without-before': afterelement !== 0 }"
-          class="pt-2 pb-6 px-3 text-white bg-black bg-opacity-25 backdrop-blur-2xl overflow-hidden">
-          <div><span>1</span><span class="">/03</span></div>
-          <h5 class="uppercase text-white">main title width</h5>
+
+      <div class="flex-shrink-0 w-full grid grid-cols-2">
+        <div class="ltr:pr-24 rtl:pl-24">
+          <p class="font-bold text-2xl pb-8">To make The title more convincing</p>
+          <p class="leading-loose text-justify">
+            Green hydrogen is particularly vulnerable to price shocks from critical
+            minerals, but this risk is largely overlooked by its developers. Explore
+            mitigation strategies in a new Ramboll whitepaper. This risk is largely
+            overlooked by its developers. Explore mitigation strategies in a new Ramboll
+            whitepaper. This risk is largely overlooked by its developers. Explore
+            mitigation strategies in a new Ramboll whitepaper.
+          </p>
         </div>
-        <div :class="{ 'with-before': afterelement == 1, 'without-before': afterelement !== 1 }"
-          class="pt-2 pb-6 px-3 text-white bg-black bg-opacity-25 backdrop-blur-2xl overflow-hidden">
-          <div><span>2</span><span class="">/03</span></div>
-          <h5 class="uppercase text-white">main title width</h5>
-        </div>
-        <div :class="{ 'with-before': afterelement == 2, 'without-before': afterelement !== 2 }"
-          class="pt-2 pb-6 px-3 text-white bg-black bg-opacity-25 backdrop-blur-2xl overflow-hidden">
-          <div><span>3</span><span class="">/03</span></div>
-          <h5 class="uppercase text-white">main title width</h5>
+        <div class="min-w-[1600px]">
+          <picture class="mx-2">
+            <img src="./assets/images/d1.jpg" alt="">
+          </picture>
         </div>
       </div>
-    </div>
+
+      <div class="flex-shrink-0 w-full grid grid-cols-2">
+        <div class="ltr:pr-24 rtl:pl-24">
+          <p class="font-bold text-2xl pb-8">To make The title more convincing</p>
+          <p class="leading-loose text-justify">
+            Green hydrogen is particularly vulnerable to price shocks from critical
+            minerals, but this risk is largely overlooked by its developers. Explore
+            mitigation strategies in a new Ramboll whitepaper. This risk is largely
+            overlooked by its developers. Explore mitigation strategies in a new Ramboll
+            whitepaper. This risk is largely overlooked by its developers. Explore
+            mitigation strategies in a new Ramboll whitepaper.
+          </p>
+        </div>
+        <div class="min-w-[1600px]">
+          <picture class="mx-2">
+            <img src="./assets/images/d1.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <div class="container">
+
   </div>
   <RouterView />
 </template>
 
 <script setup>
+import MainSlid from './components/MainSlider.vue';
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const nextWidth = ref(0);
 const next = ref(0);
 const wid = ref(null);
-const afterelement = ref(0);
 
-// Function to get the width of the DOM element
 const updateWidth = () => {
   if (wid.value) {
     const width = wid.value.offsetWidth;
@@ -65,10 +88,8 @@ const updateWidth = () => {
 const nextSlide = () => {
   if (next.value < (nextWidth.value - wid.value.offsetWidth)) {
     next.value += wid.value.offsetWidth;
-    afterelement.value = (afterelement.value + 1) % 3;
   } else {
     next.value = 0;
-    afterelement.value = 0;
   }
 };
 
@@ -78,34 +99,21 @@ onMounted(() => {
 
   const intervalId = setInterval(nextSlide, 5000);
 
-  // Cleanup interval on unmount
   onUnmounted(() => {
     clearInterval(intervalId);
     window.removeEventListener('resize', updateWidth);
   });
 });
-
 </script>
 
 <style scoped>
-.with-before::before {
-  content: '';
-  position: absolute;
+.container {
   width: 100%;
-  height: 3px;
-  transition: 5s;
-  top: 0;
-  left: 0;
-  background-color: white;
+  overflow: hidden;
 }
 
-.without-before::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transition: 1s;
-  height: 1px;
-  top: 0;
-  left: -100%;
+.flex {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 </style>
