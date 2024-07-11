@@ -15,7 +15,7 @@ export default {
 
       '1xl': '1440px',
 
-      '2xl': '1700px'
+      '2xl': '1800px'
     }
   },
   plugins: []
