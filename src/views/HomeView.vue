@@ -34,20 +34,22 @@
       </div>
     </div>
   </div>
-  <!-- Slider For Services  -->
-  <div class="container mx-auto overflow-hidden">
+  <!-- Slider For Services -->
+  <div class="container mx-auto relative">
     <!-- Content and images container -->
-    <div ref="size" class="flex items-center justify-between flex-col-reverse md:flex-row mx-auto px-8 pt-16">
+    <div ref=" size" class="flex items-center justify-between flex-col-reverse md:flex-row mx-auto px-8 pt-16">
       <div v-for="(box, index) in boxes" :key="index" v-show="currentBoxIndex === index"
-        class="flex-shrink-0 box w-full grid grid-cols-2 transition-opacity duration-500 ease-in-out transform" :class="{
+        class="flex-shrink-0 box rounded md:bg-transparent bg-gray-200 px-8 py-2 w-full flex flex-col-reverse md:flex-row transition-opacity duration-500 ease-in-out transform"
+        :class="{
           'opacity-0': currentBoxIndex !== index,
           'opacity-100': currentBoxIndex === index
         }">
-        <div class="ltr:pr-24 rtl:pl-24 flex flex-col justify-center transition-transform duration-500 ease-in-out"
+        <div
+          class="md:ltr:pr-24 rtl:pl-24 flex flex-col justify-center transition-transform duration-500 ease-in-out md:w-6/12"
           :class="{
-            'translate-x-full': currentBoxIndex < index,
-            '-translate-x-full': currentBoxIndex > index,
-            'translate-x-0': currentBoxIndex === index
+            'slide-in-left': currentBoxIndex === index,
+            'slide-out-right': currentBoxIndex < index,
+            'slide-out-left': currentBoxIndex > index
           }">
           <p
             class="text-2xl pb-8 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-700">
@@ -55,35 +57,50 @@
           </p>
           <p class="leading-loose text-justify">{{ box.content }}</p>
         </div>
-        <div class="transition-transform duration-500 ease-in-out" :class="{
-          'translate-x-full': currentBoxIndex < index,
-          '-translate-x-full': currentBoxIndex > index,
-          'translate-x-0': currentBoxIndex === index
+        <div class="transition-transform duration-500 ease-in-out md:w-6/12" :class="{
+          'slide-in-right': currentBoxIndex === index,
+          'slide-out-right': currentBoxIndex < index,
+          'slide-out-left': currentBoxIndex > index
         }">
           <picture class="mx-2 w-full">
-            <img :src="box.image" alt="">
+            <img src="../assets/images/d0.jpg" alt="">
+            <!-- <img src="../ assets / images / d1.jpg" alt=""> -->
           </picture>
         </div>
       </div>
     </div>
-    <div class="flex rtl:flex-row-reverse px-4">
+    <div class="flex rtl:flex-row-reverse md:justify-start justify-center md:my-0 my-2 md:px-4 px-0">
       <font-awesome-icon @click="prevBox"
-        class="p-4 rounded-full bg-gradient-to-l from-green-500 to-green-600 mx-1 text-white"
+        class="p-4 rounded-full bg-gradient-to-l from-green-500 to-green-600 mx-1 text-white cursor-pointer"
         :icon="['fas', 'arrow-left']" />
       <font-awesome-icon @click="nextBox"
-        class="p-4 rounded-full bg-gradient-to-l from-green-500 to-green-600 mx-1 text-white"
+        class="p-4 rounded-full bg-gradient-to-l from-green-500 to-green-600 mx-1 text-white cursor-pointer"
         :icon="['fas', 'arrow-right']" />
     </div>
   </div>
-
-  <div class="container mx-auto">
-    <RouterView />
+  <div>
+    <div class="flex justify-between">
+      <h3 class="w-1/6">
+        Expert Spotlight
+      </h3>
+      <div class="w-5/6 relative">
+        <span class="after:absolute after:top-[50%] after:left-0 after:h-1 after:w-full after:bg-gray-500"></span>
+      </div>
+    </div>
+    <div>
+      <div>
+        <img src="../assets/Dectors/blackandwhite1.jpg" alt="">
+      </div>
+    </div>
   </div>
 </template>
+
 <script setup>
 import MainSlid from '../components/MainSlider.vue';
 </script>
+
 <script>
+
 export default {
   data() {
     return {
@@ -92,12 +109,10 @@ export default {
         {
           title: 'To make The title more convincing',
           content: 'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper.',
-          image: '../assets/images/d1.jpg',
         },
         {
-          title: 'Mo make The title more convincing',
+          title: 'To make The title more convincing',
           content: 'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper.',
-          image: '../assets/images/d1.jpg',
         },
       ],
     };
@@ -106,21 +121,88 @@ export default {
     nextBox() {
       if (this.currentBoxIndex < this.boxes.length - 1) {
         this.currentBoxIndex++;
+      } else {
+        this.currentBoxIndex = 0; // Loop back to the first box
       }
     },
     prevBox() {
       if (this.currentBoxIndex > 0) {
         this.currentBoxIndex--;
+      } else {
+        this.currentBoxIndex = this.boxes.length - 1; // Loop back to the last box
       }
     },
   }
 };
 </script>
 
-
 <style scoped>
 .box {
   transition: all 0.5s ease-in-out;
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.5s forwards;
+}
+
+.slide-in-right {
+  animation: slide-in-left 0.5s forwards;
+}
+
+.slide-out-left {
+  animation: slide-out-left 0.5s forwards;
+}
+
+.slide-out-right {
+  animation: slide-out-left 0.5s forwards;
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-left {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
 </style>
 

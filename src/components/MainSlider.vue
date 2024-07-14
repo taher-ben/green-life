@@ -18,7 +18,7 @@
                 <div class="w-full">
                     <picture>
                         <img class="w-full md:hidden block" src="../assets/images/d22.jpg">
-                        <img class="h-full md:block hidden" src="../assets/images/d2.jpg">
+                        <img class="h-full md:block hidden" src="../assets/images/d0.jpg">
                     </picture>
                 </div>
                 <div class="w-full">
@@ -30,7 +30,7 @@
                 <div class="w-full">
                     <picture>
                         <img class="w-full md:hidden block" src="../assets/images/d22.jpg">
-                        <img class="h-full md:block hidden" src="../assets/images/d2.jpg">
+                        <img class="h-full md:block hidden" src="../assets/images/d0.jpg">
                     </picture>
                 </div>
             </div>
