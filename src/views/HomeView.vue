@@ -37,7 +37,7 @@
   <!-- Slider For Services -->
   <div class="container mx-auto relative">
     <!-- Content and images container -->
-    <div ref=" size" class="flex items-center justify-between flex-col-reverse md:flex-row mx-auto px-8 pt-16">
+    <div ref="size" class="flex items-center justify-between flex-col-reverse md:flex-row mx-auto px-8 pt-16">
       <div v-for="(box, index) in boxes" :key="index" v-show="currentBoxIndex === index"
         class="flex-shrink-0 box rounded md:bg-transparent bg-gray-200 px-8 py-2 w-full flex flex-col-reverse md:flex-row transition-opacity duration-500 ease-in-out transform"
         :class="{
@@ -78,65 +78,105 @@
         :icon="['fas', 'arrow-right']" />
     </div>
   </div>
-  <div>
-    <div class="flex justify-between">
-      <h3 class="w-1/6">
-        Expert Spotlight
-      </h3>
-      <div class="w-5/6 relative">
-        <span class="after:absolute after:top-[50%] after:left-0 after:h-1 after:w-full after:bg-gray-500"></span>
+
+
+  <div class="grid gap-8 md:grid-cols-3 grid-cols-1">
+    <div v-if="selectedDoctor"
+      class="show-doctor md:col-span-2 flex md:items-center md:flex-row flex-col justify-between">
+      <div class="doctor-info md:col-span-2 flex md:items-center md:flex-row flex-col justify-between">
+        <div>
+          <img src="../assets/Dectors/image.jpeg" alt="">
+        </div>
+        <div class="px-8 md:w-[600px]">
+          <p class="text-2xl mb-2 font-bold">
+            {{ selectedDoctor.description }}
+          </p>
+          <div class="mb-16">
+            <h4>{{ selectedDoctor.name }}</h4>
+            <p>{{ selectedDoctor.title }}</p>
+          </div>
+          <button>Main Button</button>
+        </div>
       </div>
     </div>
-    <div>
-      <div>
-        <img src="../assets/Dectors/blackandwhite1.jpg" alt="">
+    <div class="md:flex flex-col justify-center divide-y border-y-slate-700">
+      <div v-for="doctor in doctors" :key="doctor.id" class="flex hover:border-e-4 border-green-500 docote"
+        @click="selectDoctor(doctor)">
+        <img class="w-24" src="../assets/Dectors/image.jpeg" alt="">
+        <div class="flex flex-col justify-center px-4">
+          <h4>{{ doctor.name }}</h4>
+          <p>{{ doctor.title }}</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import MainSlid from '../components/MainSlider.vue';
-</script>
 
-<script>
-
-export default {
-  data() {
-    return {
-      currentBoxIndex: 0,
-      boxes: [
-        {
-          title: 'To make The title more convincing',
-          content: 'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper.',
-        },
-        {
-          title: 'To make The title more convincing',
-          content: 'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper.',
-        },
-      ],
-    };
+// Doctors data
+const doctors = ref([
+  {
+    id: 1,
+    name: 'Khairy',
+    title: 'CEO Director',
+    description: 'It’s important to improve accessibility and connections with our streams, rivers and greenways through restoration and enhancement.',
+    image: '../assets/Doctors/image.jpeg'
   },
-  methods: {
-    nextBox() {
-      if (this.currentBoxIndex < this.boxes.length - 1) {
-        this.currentBoxIndex++;
-      } else {
-        this.currentBoxIndex = 0; // Loop back to the first box
-      }
-    },
-    prevBox() {
-      if (this.currentBoxIndex > 0) {
-        this.currentBoxIndex--;
-      } else {
-        this.currentBoxIndex = this.boxes.length - 1; // Loop back to the last box
-      }
-    },
-  }
+  {
+    id: 1,
+    name: 'Khairy',
+    title: 'CEO Director',
+    description: 'It’s important to improve accessibility and connections with our streams, rivers and greenways through restoration and enhancement.',
+    image: '../assets/Doctors/image.jpeg'
+  },
+  {
+    id: 1,
+    name: 'Khairy',
+    title: 'CEO Director',
+    description: 'It’s important to improve accessibility and connections with our streams, rivers and greenways through restoration and enhancement.',
+    image: '../assets/Doctors/image.jpeg'
+  },
+]);
+
+// Local state for selected doctor
+const selectedDoctor = ref(null);
+
+// Select doctor function
+const selectDoctor = (doctor) => {
+  selectedDoctor.value = doctor;
+};
+
+// Data for the slider
+const currentBoxIndex = ref(0);
+const boxes = ref([
+  {
+    title: 'To make The title more convincing',
+    content: 'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper.',
+  },
+  {
+    title: 'To make The title more convincing',
+    content: 'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper.',
+  },
+]);
+
+// Functions to navigate slider
+const nextBox = () => {
+  currentBoxIndex.value = (currentBoxIndex.value + 1) % boxes.value.length;
+};
+
+const prevBox = () => {
+  currentBoxIndex.value = (currentBoxIndex.value - 1 + boxes.value.length) % boxes.value.length;
 };
 </script>
 
 <style scoped>
+.hidden {
+  display: none;
+}
+
 .box {
   transition: all 0.5s ease-in-out;
 }
