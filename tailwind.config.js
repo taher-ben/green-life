@@ -8,6 +8,7 @@ export default {
       sm: '640px',
 
       md: '768px',
+      max_md: { max: '767px' },
 
       lg: '1024px',
 

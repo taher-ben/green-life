@@ -15,10 +15,11 @@ import {
   faGlobe,
   faArrowRight,
   faArrowLeft,
-  faEye
+  faEye,
+  faLeaf
 } from '@fortawesome/free-solid-svg-icons'
 const app = createApp(App)
-library.add(faBars, faGlobe, faAnglesUp, faLocationDot, faArrowRight, faArrowLeft, faEye)
+library.add(faBars, faGlobe, faAnglesUp, faLocationDot, faArrowRight, faArrowLeft, faEye, faLeaf)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.component('ButtomMain', ButtomMain)
