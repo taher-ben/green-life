@@ -1,7 +1,7 @@
 <template>
   <MainSlid />
   <div class="container">
-    <div class="flex items-center justify-between flex-col-reverse md:flex-row mx-auto pt-16">
+    <div class="flex items-center justify-between flex-col-reverse md:flex-row mx-auto pt-16 ">
       <div class="md:w-5/12 mb:p-0 p-4">
         <div class="relative">
           <h2
