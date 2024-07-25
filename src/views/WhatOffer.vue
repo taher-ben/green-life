@@ -13,7 +13,7 @@
             <div class="h-full"><img class="" src="../assets/background2.jpg" alt=""></div>
         </div>
     </div>
-    <div class="lg:w-[60rem] mx-auto py-16 line ">
+    <div class="lg:w-[60rem] mx-auto py-16 px-2 line">
         <p class="pt-3">Our purpose is the driving force behind the way ERM shows up for clients and society. “Shaping”
             means we are
             actively influencing, collaborating and co-creating; ‘a sustainable future” has been defined through the
@@ -93,11 +93,11 @@
                 </div>
             </router-link>
         </div>
-        <div>
+        <!-- <div>
             <div
                 class="relative before:hover:opacity-80 before:transition  before:duration-200 before:w-full before:absolute before:bottom-0 before:left-0 before:h-full before:bg-gradient-to-t before:opacity-70 from-black to-transparent ">
                 <img src="../assets/backgroundsmall.jpg" alt="">
-                <div class="absolute top-0 ">
+                <div class="absolute flex justify-end top-0 ">
                     <h3 class="text-white text-2xl w-96">
                         The Sustainability Institute by ERM Institute by How My code Is work
                     </h3>
@@ -106,6 +106,6 @@
                     </router-link>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>

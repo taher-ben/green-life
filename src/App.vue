@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="container relative mx-auto">
+    <div class="container relative mx-auto z-40">
       <div class="flex justify-between">
         <div class="px-2 lg:w-52 w-40 py-2">
           <router-link to="/">
@@ -28,9 +28,9 @@
   <div class="container leading-loose mx-auto">
     <RouterView />
   </div>
-  <footer class="bg-gray-100">
-    <div class="container  p-16 mx-auto">
-      <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+  <footer class="bg-gray-950">
+    <div class="container p-8 mx-auto">
+      <!-- <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
         <div class="md:w-48 sm:w-32 md:p-0 py-4">
           <img class="w-full" src="./assets/main-logo.png" alt="">
         </div>
@@ -95,6 +95,45 @@
               </div>
             </div>
           </div>
+        </div>
+      </div> -->
+      <div class="flex flex-col md:items-center items-start ">
+        <div class="w-40 mb-4">
+          <img src="./assets/main-logo.png" alt="">
+        </div>
+        <div>
+          <ul class="flex lg:flex-row flex-col  mb-4">
+            <li class=" capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
+              <router-link>
+                About Company
+              </router-link>
+            </li>
+            <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
+              <router-link>
+                What We Offer
+              </router-link>
+            </li>
+            <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
+              <router-link>
+                contact us
+              </router-link>
+            </li>
+            <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
+              <router-link>
+                What We Offer
+              </router-link>
+            </li>
+            <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
+              <router-link>
+                What We Offer
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-sm text-gray-400 mt-4 ">
+            Copyright © 2024 The Green Life Company, All Rights Reserved
+          </h5>
         </div>
       </div>
     </div>
