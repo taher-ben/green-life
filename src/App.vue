@@ -16,7 +16,9 @@
                 to="/WhatWeOffer" @click="toggleMenu">What We Offer</router-link>
             </li>
             <li class="pb-4 lg:border-b-0 border-b-2  lg:pb-0"><router-link active-class="text-green-500" class="px-2"
-                to="d" @click="toggleMenu">News</router-link></li>
+                to="About" @click="toggleMenu">About</router-link></li>
+                <li class="pb-4 lg:border-b-0 border-b-2  lg:pb-0"><router-link active-class="text-green-500" class="px-2"
+                  to="/NewsAndSubject" @click="toggleMenu">News</router-link></li>
           </ul>
         </div>
         <div @click="toggleMenu" class="px-2 text-2xl my-auto lg:hidden block">
@@ -25,7 +27,7 @@
       </div>
     </div>
   </header>
-  <div class="container leading-loose mx-auto">
+  <div class="leading-loose mx-auto">
     <RouterView />
   </div>
   <footer class="bg-gray-950">
@@ -109,17 +111,17 @@
               </router-link>
             </li>
             <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-              <router-link>
+              <router-link to="WhatWeOffer">
                 What We Offer
               </router-link>
             </li>
             <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-              <router-link>
+              <router-link to="/">
                 contact us
               </router-link>
             </li>
             <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-              <router-link>
+              <router-link to="">
                 What We Offer
               </router-link>
             </li>

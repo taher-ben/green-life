@@ -1,6 +1,6 @@
 <template>
   <MainSlid />
-  <div class="container">
+  <div class="container mx-auto">
     <div class="flex items-center justify-between flex-col-reverse md:flex-row mx-auto pt-16 ">
       <div class="md:w-5/12 mb:p-0 p-4">
         <div class="relative">
@@ -10,7 +10,6 @@
             Environmental
             Solutions.</h2>
         </div>
-
         <p class="mb-8">
           At Green Life Company, we are committed to preserving the environment by monitoring pollution and assessing
           environmental impacts, and developing innovative solutions to reduce negative effects. We strive to ensure

@@ -11,8 +11,10 @@ export default {
       max_md: { max: '767px' },
 
       lg: '1024px',
-
+      max_lg: { max: '1023px' },
+      
       xl: '1280px',
+      max_xl: { max: '1279px' },
 
       '1xl': '1440px',
 

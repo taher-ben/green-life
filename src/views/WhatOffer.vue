@@ -41,9 +41,7 @@
         <p class="pt-3">
             Our organizational structure is built around our Partnership model. Our Partners – trusted advisors to
             leading organizations across the globe – mobilize our team of experts across 40 countries in our continuous
-            effort to remain the leader in sustainability consulting.
-
-
+            effort to remain the leader in sustainability consulting. 
         </p>
     </div>
     <div class=" 1xl:w-[75rem] py-4 mx-auto">
@@ -52,7 +50,7 @@
             What We Offer
         </h3>
         <div class="grid 1xl:grid-cols-2 grid-cols-1  gap-4">
-            <router-link to=""
+            <router-link :to="{name:'ServiceDetails', params:{id:1}}"
                 class="relative before:hover:opacity-80 before:transition  before:duration-200 before:w-full before:absolute before:bottom-0 before:left-0 before:h-full before:bg-gradient-to-t before:opacity-70 from-black to-transparent">
                 <img class=" shadow-sm shadow-white" src="../assets/background.jpg" alt="">
                 <div class="absolute h-full top-0 flex flex-col justify-between p-3">
