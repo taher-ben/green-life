@@ -9,6 +9,8 @@ import ButtomMain from './components/ButtomMain.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ButtomHover from './components/ButtomHover.vue'
+
+
 import {
   faBars,
   faAnglesUp,
@@ -28,7 +30,9 @@ app.component('font-awesome-icon', FontAwesomeIcon)
 app.component('ButtomMain', ButtomMain)
 app.component('ButtomHover', ButtomHover)
 
+
 app.use(createPinia())
 app.use(router)
+
 
 app.mount('#app')

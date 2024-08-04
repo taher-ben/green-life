@@ -93,7 +93,7 @@
       <div class="md:w-[45%] max_md:w-full overflow-hidden relative ">
         <div class="flex justify-between transition-transform duration-500 ease-in-out md:hidden my-8  shadow-inner"
           :style="{ transform: `translateX(-${currentIndex * 90}%)` }">
-          <div class="box flex-none shadow-xl w-96 mx-2 rounded-sm">
+          <RouterLink :to="{ name: 'DoctorsCv', params: { id: 1 } }" class="box flex-none shadow-xl w-96 mx-2 rounded-sm">
             <div>
               <img src="../assets/Dectors/1.jpeg" alt="">
             </div>
@@ -101,43 +101,7 @@
               <h3 class="text-xl text-black font-bold">Main Title One</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vitae mollitia eius rem! Eaque,</p>
             </div>
-          </div>
-          <div class="box flex-none shadow-xl w-96 mx-2 rounded-sm">
-            <div>
-              <img src="../assets/Dectors/2.jpeg" alt="">
-            </div>
-            <div class="mt-4 mb-8 p-4">
-              <h3 class="text-xl text-black font-bold">Main Title Two</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vitae mollitia eius rem! Eaque,</p>
-            </div>
-          </div>
-          <div class="box flex-none shadow-xl w-96 mx-2 rounded-sm">
-            <div>
-              <img src="../assets/Dectors/2.jpeg" alt="">
-            </div>
-            <div class="mt-4 mb-8 p-4">
-              <h3 class="text-xl text-black font-bold">Main Title Three</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vitae mollitia eius rem! Eaque,</p>
-            </div>
-          </div>
-          <div class="box flex-none shadow-xl w-96 mx-2 rounded-sm">
-            <div>
-              <img src="../assets/Dectors/1.jpeg" alt="">
-            </div>
-            <div class="mt-4 mb-8  mx-8 p-4">
-              <h3 class="text-xl text-black font-bold">Main Title Four</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vitae mollitia eius rem! Eaque,</p>
-            </div>
-          </div>
-          <div class="box flex-none shadow-xl w-96 mx-2 rounded-sm">
-            <div>
-              <img src="../assets/Dectors/2.jpeg" alt="">
-            </div>
-            <div class="mt-4 mb-8 mx-8 p-4">
-              <h3 class="text-xl font-bold">Main Title Four</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vitae mollitia eius rem! Eaque,</p>
-            </div>
-          </div>
+          </RouterLink>
         </div>
       </div>
       <div class="w-5/12 max_md:hidden mx-8">
@@ -167,7 +131,6 @@
       </div>
     </div>
   </div>
-
 </template>
 <script setup>
 import { ref } from 'vue';

@@ -24,40 +24,13 @@
         <h3 class="py-16 text-green-500 font-bold text-xl">News & Midea</h3>
         <div class="grid grid-cols-3 gap-8">
             <div class="box">
-                <img src="../assets/background4.jpg" alt="">
-                <data value="2024-06-20">2024-06-20</data>
+                <img src=../assets/background2.jpg alt="">
+                <data value="" class="text-gray-400">2024-06-20</data>
+                <h3 class=" hover:underline underline-offset-3 text-black font-semibold">
+                    How to make title
+                </h3>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam facilis consectetur adipisicing elit. Nam facilis  consectetur adipisicing elit. Nam facilis consectetur adipisicing elit. Nam facilis 
-                </p>
-                <div class="py-4 text-green-600 hover:text-gray-300">
-                    <ButtomHover link="/" Hovertext="textHover" />
-                </div>
-            </div>
-            <div class="box">
-                <img src="../assets/background2.jpg" alt="">
-                <data value="2024-06-20">2024-06-20</data>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam facilis consectetur adipisicing elit. Nam facilis  consectetur adipisicing elit. Nam facilis consectetur adipisicing elit. Nam facilis 
-                </p>
-                <div class="py-4 text-green-600 hover:text-gray-300">
-                    <ButtomHover link="/" Hovertext="textHover" />
-                </div>
-            </div>
-            <div class="box">
-                <img src="../assets/background3.jpg" alt="">
-                <data value="2024-06-20">2024-06-20</data>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam facilis consectetur adipisicing elit. Nam facilis  consectetur adipisicing elit. Nam facilis consectetur adipisicing elit. Nam facilis 
-                </p>
-                <div class="py-4 text-green-600 hover:text-gray-300">
-                    <ButtomHover link="/" Hovertext="textHover" />
-                </div>
-            </div>
-            <div class="box">
-                <img src="../assets/background4.jpg" alt="">
-                <data value="2024-06-20">2024-06-20</data>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam facilis consectetur adipisicing elit. Nam facilis  consectetur adipisicing elit. Nam facilis consectetur adipisicing elit. Nam facilis 
+                    This pargraph may do nothing
                 </p>
                 <div class="py-4 text-green-600 hover:text-gray-300">
                     <ButtomHover link="/" Hovertext="textHover" />
@@ -67,6 +40,11 @@
     </div>
 </template>
 <script>
-
-
+export default {
+    computed:{
+        textlint:{
+            
+        }
+    }
+}
 </script>
