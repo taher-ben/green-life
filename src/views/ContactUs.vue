@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-gray-100">
-    <div class="container lg:p-32 px-2 bg-gray-100 mx-auto">
+  <div class="bg-gray-50">
+    <div class="container lg:p-32 px-2 bg-gray-50 mx-auto">
       <div class="shadow-xl p-16">
         <div class="xl:grid flex flex-col grid-cols-2 gap-4">
           <div class="my-auto">
@@ -65,15 +65,15 @@
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              class="z-20 h-full w-full"
+              class="z-20 h-full shadow-xl w-full"
             ></iframe>
           </div>
         </div>
         <div>
-          <div class="flex lg:flex-row flex-col justify-evenly mt-6 w-full">
-            <div class="flex items-center">
+          <div class="flex lg:flex-row flex-col items-center justify-evenly mt-6 w-full">
+            <div class="flex lg:flex-row flex-col w-full justify-center items-center">
               <font-awesome-icon
-                class="text-green-400 text-3xl"
+                class="text-green-400 lg:pb-0 pb-4 text-3xl"
                 :icon="['fas', 'map-location-dot']"
               />
               <div class="ps-4">
@@ -81,15 +81,21 @@
                 <p class="capitalize text-lg">Libya - Tripole -</p>
               </div>
             </div>
-            <div class="flex items-center">
-              <font-awesome-icon class="text-green-400 text-3xl" :icon="['fas', 'phone']" />
+            <div class="flex lg:flex-row flex-col w-full justify-center items-center">
+              <font-awesome-icon
+                class="text-green-400 lg:pb-0 pb-4 text-3xl"
+                :icon="['fas', 'phone']"
+              />
               <div class="ps-4">
                 <h4 class="black text-xl">Location</h4>
                 <p class="capitalize text-lg">Libya - Tripole -</p>
               </div>
             </div>
-            <div class="flex items-center">
-              <font-awesome-icon class="text-green-400 text-3xl" :icon="['fas', 'envelope-open']" />
+            <div class="flex lg:flex-row flex-col w-full justify-center items-center">
+              <font-awesome-icon
+                class="text-green-400 lg:pb-0 pb-4 text-3xl"
+                :icon="['fas', 'envelope-open']"
+              />
               <div class="ps-4">
                 <h4 class="black text-xl">Location</h4>
                 <p class="capitalize text-lg">Libya - Tripole -</p>

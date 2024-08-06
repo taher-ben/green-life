@@ -39,7 +39,7 @@
       countries in our continuous effort to remain the leader in sustainability consulting.
     </p>
   </div>
-  <div class="1xl:w-[75rem] py-4 mx-auto">
+  <div class="xl:w-[75rem] px-2 py-4 mx-auto">
     <h3
       class="pb-8 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-green-400 to-green-700"
     >
