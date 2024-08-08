@@ -11,9 +11,11 @@
                 Contact Us
               </h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. A et rem maxime corporis,
-                consequatur laborum adipisci voluptas quas aliquid voluptatem reprehenderit,
-                dolorem, minus obcaecati sequi aliquam enim animi dignissimos error!
+                At Green Life Environmental Studies Company, we are committed to providing
+                sustainable services and solutions to our clients. You can contact us via phone or
+                email for any inquiries or feedback, as we have a specialized team available to
+                respond and provide the necessary support to ensure your satisfaction. We look
+                forward to collaborating with you for a more sustainable future.
               </p>
             </div>
             <vee-form>
@@ -78,7 +80,7 @@
               />
               <div class="ps-4">
                 <h4 class="black text-xl">Location</h4>
-                <p class="capitalize text-lg">Libya - Tripole -</p>
+                <p class="capitalize text-lg">Libya - Tripole - hai alandalus</p>
               </div>
             </div>
             <div class="flex lg:flex-row flex-col w-full justify-center items-center">
@@ -88,7 +90,8 @@
               />
               <div class="ps-4">
                 <h4 class="black text-xl">Location</h4>
-                <p class="capitalize text-lg">Libya - Tripole -</p>
+                <p class="capitalize text-lg">+218 91 217 0803</p>
+                <p class="capitalize text-lg">+218 91 217 0803</p>
               </div>
             </div>
             <div class="flex lg:flex-row flex-col w-full justify-center items-center">
@@ -97,8 +100,8 @@
                 :icon="['fas', 'envelope-open']"
               />
               <div class="ps-4">
-                <h4 class="black text-xl">Location</h4>
-                <p class="capitalize text-lg">Libya - Tripole -</p>
+                <h4 class="black text-xl">Email</h4>
+                <p class="capitalize text-lg">info@greenlife.ly</p>
               </div>
             </div>
           </div>

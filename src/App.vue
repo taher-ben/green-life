@@ -73,7 +73,7 @@
       </div>
     </div>
   </header>
-  <div class="leading-loose mx-auto">
+  <div class="leading-loose mx-auto px-2">
     <RouterView :dir="$i18n.locale == 'ar' ? 'rtl' : 'ltr'" />
   </div>
   <footer class="bg-gray-950" :dir="$i18n.locale == 'ar' ? 'rtl' : 'ltr'">

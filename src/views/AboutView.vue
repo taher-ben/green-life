@@ -47,8 +47,17 @@
         environmental management and protection.
       </p>
     </div>
-    <div class="bg-blue-300 p-8 text-white">
+    <div>
+      <div class="bg-blue-300 mb-2 p-4">
+        <h2 class="text-white text-xl">Accreditation and Compliance <span class="text-green-600">Documents</span>
+        </h2>
+        <RouterLink to="Accreditation" >
+        <h3 class="text-white text-xl"> ISO <span class="text-green-600">14001:2015</span> </h3>
+      </RouterLink>
+      </div>
+      <div class="bg-blue-300 p-8 text-white">
       <img class="w-32 pb-2" src="../assets/icons/Sustainability.png" alt="" />
+      <h3 class="text-xl py-2 font-bold">Sustainable</h3>
       <p>
         Green Life Environmental Studies Company aims to be the leading partner in providing
         innovative and sustainable environmental solutions and contributing to building a green and
@@ -57,11 +66,12 @@
         achieving sustainable development.
       </p>
     </div>
+    </div>
   </div>
   <div class="w-5/6 mx-auto">
     <h3 class="text-2xl text-blue-300 mb-2">Projects</h3>
     <div>
-      <div class="grid grid-cols-3 gap-8">
+      <div class="grid lg:grid-cols-3 grid-cols-1 gap-8">
         <div class="box">
                 <img src=../assets/background2.jpg alt="">
                 <data value="" class="text-gray-400">2024-06-20</data>
@@ -82,5 +92,7 @@
   </div>
 </template>
 <script>
+// import { RouterLink } from 'vue-router';
+
 export default {}
 </script>
