@@ -29,7 +29,7 @@
                 <h3 class=" hover:underline underline-offset-3 text-black font-semibold">
                     How to make title
                 </h3>
-                <p>
+                <p class="line-clamp-1">
                     This pargraph may do nothing
                 </p>
                 <div class="py-4 text-green-600 hover:text-gray-300">

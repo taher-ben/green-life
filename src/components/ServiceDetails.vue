@@ -9,14 +9,24 @@
           voluptatem necessitatibus possimus, optio debitis rem fugit.
         </p>
       </div>
-      <div class="h-full"><img class="" src="../assets/background2.jpg" alt="" /></div>
+      <div class="h-full">
+        <img class="" src="../assets/background2.jpg" alt="Background image" />
+      </div>
     </div>
   </div>
-  <div class="container mx-auto w-[100rem] pt-16">dfa</div>
+  <div class="container mx-auto w-[100rem] pt-16">{{ $t(`${id}.1`) }}</div>
 </template>
 
 <script>
 export default {
-  props: 'id'
+  props: {
+    id: {
+      type: String,
+      required: true
+    }
+  },
+  data() {
+    return {}
+  }
 }
 </script>

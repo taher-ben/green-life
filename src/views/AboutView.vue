@@ -1,94 +1,86 @@
 <template>
-    <div class="">
-        <div
-            class=" relative after:bg-black after:absolute after:top-0 after:left-0 after:opacity-45 after:w-full after:h-full">
-            <img src="../assets/background.jpg" alt="">
-            <div>
-                <div class="absolute z-20 top-0 flex items-center h-fit p-8">
-                    <router-link to="/WhatWeOffer" class="text-white text-xl">
-                        Information regarding Green Life Company
-                    </router-link>
+  <div class="">
+    <div
+      class="relative after:bg-black after:absolute after:top-0 after:left-0 after:opacity-45 after:w-full after:h-full"
+    >
+      <img src="../assets/background.jpg" alt="" />
+      <div>
+        <div class="absolute z-20 top-0 flex items-center h-fit p-8">
+          <router-link to="/WhatWeOffer" class="text-white text-xl">
+            Information regarding Green Life Company
+          </router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-5/6 mx-auto grid lg:grid-cols-3 grid-cols-1 lg:gap-32 gap-4 my-16">
+    <div class="col-span-2">
+      <h3 class="pt-3 text-2xl font-bold text-green-400 text-balance md:w-3/6">
+        Green Life Environmental Studies Company
+      </h3>
+      <p class="pt-3">
+        Green Life Environmental Studies Company is a leading company in the field of environment
+        and sustainability. It works on providing innovative and sustainable environmental solutions
+        to promote environmental development in various regions. The company aims to achieve a
+        balance between economic development and environmental preservation by offering specialized
+        services in environmental studies, consultations, and integrated environmental solutions.
+      </p>
+      <h3 class="pt-3 text-2xl font-bold text-green-400 text-balance md:w-3/6">
+        Environmental Damage Analysis:
+      </h3>
+      <p class="pt-3">
+        The company conducted comprehensive studies to analyze the environmental damages caused by
+        Hurricane Daniel in the city of Derna. These studies included an assessment of the damage
+        inflicted on the local environment and infrastructure. The company also worked on developing
+        environmental recovery plans, including the rehabilitation of affected areas and the
+        restoration of damaged ecosystems. Additionally, the company organized awareness campaigns
+        for the local community about the importance of environmental conservation and sustainable
+        ways to interact with natural crises.
+      </p>
+      <h3 class="text-xl">Collaboration with the Ministry of Environment in Libya:</h3>
+      <p class="pt-3">
+        The company worked with the Libyan Ministry of Environment to develop environmental policies
+        that enhance environmental protection and promote sustainable development. The company also
+        assisted in formulating strategies for sustainable management of natural resources,
+        including water and agricultural lands. Additionally, the company organized workshops and
+        training programs for government personnel in Libya to enhance their capabilities in
+        environmental management and protection.
+      </p>
+    </div>
+    <div class="bg-blue-300 p-8 text-white">
+      <img class="w-32 pb-2" src="../assets/icons/Sustainability.png" alt="" />
+      <p>
+        Green Life Environmental Studies Company aims to be the leading partner in providing
+        innovative and sustainable environmental solutions and contributing to building a green and
+        sustainable future for future generations. The company focuses on raising environmental
+        awareness and providing practical solutions that help in preserving the environment and
+        achieving sustainable development.
+      </p>
+    </div>
+  </div>
+  <div class="w-5/6 mx-auto">
+    <h3 class="text-2xl text-blue-300 mb-2">Projects</h3>
+    <div>
+      <div class="grid grid-cols-3 gap-8">
+        <div class="box">
+                <img src=../assets/background2.jpg alt="">
+                <data value="" class="text-gray-400">2024-06-20</data>
+                <h3 class=" hover:underline underline-offset-3 text-black font-semibold">
+                    How to make title
+                </h3>
+                <p class="line-clamp-1">
+                    This pargraph may do nothing
+                    This pargraph may do nothing
+                    This pargraph may do nothing
+                </p>
+                <div class="py-4 text-green-600 hover:text-gray-300">
+                    <ButtomHover link="/" Hovertext="textHover" />
                 </div>
             </div>
-        </div>
+      </div>
     </div>
-    <div class=" w-5/6 mx-auto grid lg:grid-cols-3 grid-cols-1 lg:gap-32 gap-4 my-16">
-        <div class="col-span-2">
-            <h3 class="pt-3 text-2xl font-bold text-green-400 text-balance md:w-3/6">
-                In pursuit of our purpose,
-                on more than 50 years
-            </h3>
-            <p class="pt-3">Our purpose is the driving force behind the way ERM shows up for clients and society.
-                “Shaping”
-                means we are
-                actively influencing, collaborating and co-creating; ‘a sustainable future” has been defined through the
-                Sustainable Development Goals (SDGs). And “with the world’s leading organizations” inspires
-                collaboration
-                with our clients and society’s most prominent changemakers alike in order to make a difference through
-                our
-                work.
-            </p>
-            <h3 class="pt-3 text-2xl font-bold text-green-400 text-balance md:w-3/6">
-                In pursuit of our purpose,
-                we draw on more than 50 years of environmental
-            </h3>
-            <p class="pt-3">
-                We continue to innovate and invest to ensure we have up to date capabilities and the broadest set of
-                skills
-                to support our clients’ needs and deepen our impact at any level of their business. At the same time,
-                ERM
-                values remain constant – accountability, client focus, collaboration, empowerment, care for our people
-                and
-                transparency.
-            </p>
-            <p class="pt-3">
-                Our organizational structure is built around our Partnership model. Our Partners – trusted advisors to
-                leading organizations across the globe – mobilize our team of experts across 40 countries in our
-                continuous
-                effort to remain the leader in sustainability consulting.
-
-
-            </p>
-        </div>
-        <div class="bg-blue-300 p-8 text-white">
-            <!-- <font-awesome-icon class="text-5xl mb-4 text-blue-50" :icon="['fas', 'leaf']" /> -->
-            <h3 class="text-3xl font-semibold">+2000</h3>
-            <p>
-                Our organizational structure is built around our Partnership model. Our Partners – trusted advisors to
-                leading organizations across the globe – mobilize our team of experts across 40 countries in our
-                continuous
-                effort to remain the leader in sustainability consulting.
-                organizations across the globe – mobilize our team of experts across 40 countries in our
-                continuous
-                effort to remain the leader in sustainability consulting.
-            </p>
-        </div>
-    </div>
-    <div class="w-5/6 mx-auto">
-        <h3 class="text-2xl">
-            Projects
-        </h3>
-        <div>
-            <div>
-                <div class="w-96">
-                    <img src="../assets/background2.jpg" alt="">
-                    <div>
-                        <h3 class="text-xl my-4">Head line for the report</h3>
-                        <p>regarding regarding Green Life Company regarding Green Life Companys Green Life Company</p>
-                        <div>
-                            read more
-                        </div>
-                    </div>
-                </div>
-                <div>
-
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </template>
 <script>
-export default {
-
-}
+export default {}
 </script>

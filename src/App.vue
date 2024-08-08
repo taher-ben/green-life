@@ -84,19 +84,16 @@
       <div>
         <ul class="flex lg:flex-row flex-col mb-4">
           <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-            <router-link> About Company </router-link>
+            <router-link to="/about"> About Company </router-link>
           </li>
           <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-            <router-link to="WhatWeOffer"> What We Offer </router-link>
+            <router-link to="/WhatWeOffer"> What We Offer </router-link>
           </li>
           <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
             <router-link to="/"> contact us </router-link>
           </li>
           <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-            <router-link to=""> What We Offer </router-link>
-          </li>
-          <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-            <router-link> What We Offer </router-link>
+            <router-link to="NewsAndSubject"> News And Subject </router-link>
           </li>
         </ul>
       </div>
