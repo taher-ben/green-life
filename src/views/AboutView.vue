@@ -49,7 +49,7 @@
     </div>
     <div>
       <div class="bg-blue-300 mb-2 p-4">
-        <h2 class="text-white text-xl">Accreditation and Compliance <span class="text-green-600">Documents</span>
+        <h2 class="text-white text-2xl font-bold">Accreditation and Compliance <span class="text-green-600">Documents</span>
         </h2>
         <RouterLink to="Accreditation" >
         <h3 class="text-white text-xl"> ISO <span class="text-green-600">14001:2015</span> </h3>

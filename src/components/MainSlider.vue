@@ -36,7 +36,7 @@
             </div>
             <div class="overflow-x-auto md:absolute md:bottom-0 md:overflow-hidden slideNumerContainer">
                 <div class="flex w-max md:min-w-[1500px]">
-                    <div v-for="(item, index) in 5" :key="index" @click="show(index)"
+                    <div v-for="(item, index) in 4" :key="index" @click="show(index)"
                         :class="{ 'with-before': afterelement == index, 'without-before': afterelement !== index }"
                         class="pt-2 pb-6 px-3 text-white cursor-pointer bg-black bg-opacity-25 backdrop-blur-2xl overflow-hidden 1xl:w-72 w-44">
                         <div><span>{{ index + 1 }}</span><span class="opinter">/03</span></div>
@@ -71,7 +71,7 @@ const updateWidth = () => {
 const nextSlide = () => {
     if (next.value < (nextWidth.value - wid.value.offsetWidth)) {
         next.value += wid.value.offsetWidth;
-        afterelement.value = (afterelement.value + 1) % 5;
+        afterelement.value = (afterelement.value + 1) % 4;
     } else {
         next.value = 0;
         afterelement.value = 0;
