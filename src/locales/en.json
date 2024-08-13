@@ -1,4 +1,113 @@
 {
     "home":"الرئيسية",
-    "about":"من نحن"
-}
+    "about":"من نحن",
+
+        "Dr_Najib_Ali_Bishr": {
+            "About_Me": {
+                "name":"Dr.Najib Ali Bishr",
+                "Date_of_Birth": "1953",
+                "Marital_Status": "Married",
+                "Contact": "najibbishr@marsellia.com"
+            },
+            "Education": [
+                "Bachelor of Pharmacy, Faculty of Pharmacy, Cairo University, Egypt, 1975-1982.",
+                "Master of Public Health, Johns Hopkins Bloomberg School of Public Health (funded by USAID), 2008-2010.",
+                "Diploma in Human Resources, Narita Academy/Cairo and Cambridge Training College/UK, 2009.",
+                "Online Certificate in Introduction to Procurement and Supply Chain Management of Medical Commodities from the United Nations Development Programme (UNDP), 2016."
+                        ],
+            "Professional_Experience": [
+                "Chairman of the National Committee for Monitoring Adverse Events Following Immunization (AEFI) for all vaccinations in Libya since March 2023.",
+                "Member of the Essential Drugs Selection Committee at the Ministry of Health in Libya.",
+                "Head of the AEFI Monitoring Team for COVID-19 Vaccines in October 2019.",
+                "Consultant for the Disposal of Expired and Spoiled Medicines at Marseille Company since 2018.",
+                "National Consultant with the World Health Organization for Medical Supply Assessment and Drug Warehouses in Libya in 2017 and 2018.",
+                "Founder and Chairman of the Pharmacovigilance Committee at the National Center for Disease Control and Antibiotic Policy Development Committee.",
+                "Head of the Pharmacovigilance Department at the Pharmacy Management Department of the National Center for Disease Control since 2022.",
+                "Worked as Planning Department Head and later Quality Department Head at the National Center for Disease Control from August 2013 to June 2023."
+                ]
+        },
+        "Dr_Nouri_Ali_Eldroughi": {
+            "About_Me": {
+                "Date_of_Birth": "August_20,_1957",
+                "Marital_Status": "Married",
+                "Contact": "n.droughi@marsellia.com"
+            },
+            "Education": [
+                "Bachelor's degree in Chemical Engineering from the Faculty of Engineering, University of Benghazi, 1971-1974.",
+                "Master's degree in Environmental Engineering from the Faculty of Civil Engineering, Faculty of Engineering, Cairo University, 1975-1979.",
+                "PhD in Environmental Engineering from the Department of Environmental Engineering, Faculty of Engineering, University of Kansai, Japan, 1979-1981.",
+                "Postgraduate studies in Environmental and Occupational Health at the Faculty of Public Health, Sur University College, affiliated with Jilin University/China, 1990-1993."
+                       ],
+            "Professional_Experience": [
+                "Bachelor's degree in Chemical Engineering from the Faculty of Engineering, University of Benghazi, 1971-1974.",
+                "Master's degree in Environmental Engineering from the Faculty of Civil Engineering, Faculty of Engineering, Cairo University, 1975-1979.",
+                "PhD in Environmental Engineering from the Department of Environmental Engineering, Faculty of Engineering, University of Kansai, Japan, 1979-1981.",
+                "Postgraduate studies in Environmental and Occupational Health at the Faculty of Public Health, Sur University College, affiliated with Jilin University/China, 1990-1993."
+                       ]
+        },
+        "Dr_Taher_Ibrahim_Al-Tabet": {
+            "About_Me": {
+                "Date_of_Birth": "October_3,_1960",
+                "Marital_Status": "Married",
+                "Contact": "a.altabet@marsellia.com"
+            },
+            "Education": [
+                "Assistant Lecturer in the Department of Medical Microbiology, Faculty of Medical Sciences, Sabha University, 1985-1990.",
+                "Lecturer in the Virology Department, Faculty of Medical Sciences, Sabha University, 1991-1997.",
+                "Lecturer in the Microbiology Department, Faculty of Veterinary Medicine, Saharan Center University, Wadi Al-Shatii, 1997-2007.",
+                "Full-time lecturer in microbiology for medical students at the exam preparation centers in Tripoli, 2008-2011.",
+                "Full-time lecturer in science at the University of Western Mountain, Gharyan, 2007-2008.",
+                "Full-time lecturer in science at the Higher Institute of Medical Sciences, Benghazi, 2000-2003.",
+                "Contract Professor at the Faculty of Veterinary Medicine, University of Zawia, 1998-2000.",
+                "Lecturer in Medical Mycology at the Faculty of Pharmacy, Tripoli University, 2004-2005."
+                       ]
+        },
+        "Eng_Khayri_Ali_Gharyani": {
+            "About_Me": {
+                "Date_of_Birth": "January_15,_1964",
+                "Marital_Status": "Married",
+                "Contact": "khairy@marsellia.com"
+            },
+            "Education": [
+                "Bachelor of Engineering: Civil Engineering - 85/1986 Tripoli University.",
+                "High Diploma with Distinction: Hydraulic engineering, Sep 90 to Sep 91, IHE Delft-Netherlands.",
+                "M.Sc in Engineering Management: (has been completed in April 2022), Tripoli University, Tripoli-Libya. 1997-2007."
+                       ],
+            "Professional_Experience": [
+                "April 2021 – Present: Business Development Manager, Bonyan Consulting Engineers",
+                "Responsibilities: Lead the business development efforts, identify new opportunities and foster partnerships.",
+                "Develop negotiating strategies and positions, considering company strategies and operations.",
+                "Enhance staff performance to maximize profitability and ensure effective business planning.",
+                "Predict future market needs and trends."
+                       ]
+        },
+        "Eng_Ezaddin_Hussen_Ashebeni": {
+            "About_Me": {
+                "Date_of_Birth": "1964",
+                "Marital_Status": "Married",
+                "Contact": "ezzedin@marsellia.com"
+            },
+            "Education": [
+                "1989:_Science_University_(Zawiya)_Faculty_of_Chemistry_(Graduated_as_chemist)"
+            ],
+            "Professional_Experience": [
+                "1992:_Almaya_Pharmaceuticals_Factory_(Supervisor_of_Physical-Chemical_Department)",
+                "1998:_Analyzing_of_drugs_in_ways_that_separation_(chromatography)_and_methods_of_the_color_spectrum_of_the_National_Authority_for_Research_(Egypt)",
+                "1999:_Quality_Control_Manager_(Almaya_Pharmaceuticals_Factory)",
+                "2000:_Training_in_Roche_Company_QC_(Germany)",
+                "2001:_GMP_and_GLP_Certificate_from_WHO_(Budapest,_Hungary)",
+                "2002:_Certificate_of_GLP_from_Slopharma_Company_GLP_(Slovakia)",
+                "2002:_Training_in_ISO_17025_(SGS)",
+                "2003:_Member_of_Inspection_Team_for_raw_and_packaging_materials_in_European_countries",
+                "2004:_Member_of_the_National_Community_for_Laboratory_Accreditation",
+                "2007:_Technical_Manager_at_Sadeem_Company",
+                "2008:_VARIA_UV-VIS_instruments_(Cary_50,_100,_300)",
+                "2015:_FT-IR_Spectrophotometer_Series_(Bruker)",
+                "2019-2020:_Member_of_the_team_for_pest_control_for_coronavirus_at_Marsellia_Co._For_Cleanliness_&_Environmental_Protection.",
+                "2021:_Member_of_the_Scientific_Committee_at_Marsellia_Co._For_Cleanliness_&_Environmental_Protection.",
+                "2022:_Head_of_Soil_and_Air_Laboratory_at_Marsellia_Co._For_Cleanliness_&_Environmental_Protection.",
+                "2023:_Quality_Manager_at_Marsellia_Co._For_Cleanliness_&_Environmental_Protection."
+            ]
+        }
+    }
+    

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import ServiceDetails from '../components/ServiceDetails.vue'
+
 import DoctorsCv from '../components/DoctorsCv.vue'
 
 const router = createRouter({
@@ -10,12 +10,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
-    },
-    {
-      path: '/ServiceDetails/:id',
-      name: 'ServiceDetails',
-      component: ServiceDetails,
-      props:true
     },
     {
       path: '/ourteam/cv',
@@ -62,6 +56,22 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/ContactUs.vue')
+    },
+    {
+      path: '/ServicesEnv',
+      name: 'ServicesEnv',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/OurServices/ServicesEIA.vue')
+    },
+    {
+      path: '/ServicesEIA',
+      name: 'ServicesEIA',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/OurServices/ServicesEIA.vue')
     }
   ]
 })
