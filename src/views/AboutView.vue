@@ -6,9 +6,9 @@
       <img src="../assets/background.jpg" alt="" />
       <div>
         <div class="absolute z-20 top-0 flex items-center h-fit p-8">
-          <router-link to="/WhatWeOffer" class="text-white text-xl">
+          <RouterLink  to="/WhatWeOffer" class="text-white text-xl">
             Information regarding Green Life Company
-          </router-link>
+          </RouterLink >
         </div>
       </div>
     </div>

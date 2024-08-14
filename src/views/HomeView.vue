@@ -17,12 +17,12 @@
           environmental impacts, and we work on developing innovative environmental strategies and
           solutions to mitigate negative environmental impacts.
         </p>
-        <router-link
+        <RouterLink
           class="py-4 px-4 bg-gradient-to-l from-green-400 to-green-500 text-white font-extrabold rounded-full transition ease-in-out duration-500 transform hover:duration-500 hover:bg-gradient-to-l hover:from-green-400 hover:to-green-500 hover:scale-105 hover:rotate-1 hover:shadow-xl"
           to="/about"
         >
           About Company
-        </router-link>
+        </RouterLink>
       </div>
       <div class="md:w-6/12 flex justify-center relative">
         <img class="md:w-72 sm:w-56 md:mb-0 mb-4" src="../assets/logo.png" alt="" />
@@ -117,7 +117,18 @@
           :style="{ transform: `translateX(-${currentIndex * 90}%)` }"
         >
           <RouterLink
-            :to="{ name: 'DoctorsCv', params: { id: 1 } }"
+            :to="{ name: 'DoctorsCv', params: { id: 'Dr_Najib_Ali_Bishr', ed: 4, pro: 8 } }"
+            class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
+          >
+            <div>
+              <img src="../assets/Dectors/1.jpeg" alt="" />
+            </div>
+            <div class="mt-4 mb-8 p-4">
+              <h3 class="text-xl text-black font-bold">{{}}</h3>
+            </div>
+          </RouterLink>
+          <RouterLink
+            :to="{ name: 'DoctorsCv', params: { id: 'Dr_Nouri_Ali_Eldroughi', ed: 4, pro: 4 } }"
             class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
           >
             <div>
@@ -125,10 +136,42 @@
             </div>
             <div class="mt-4 mb-8 p-4">
               <h3 class="text-xl text-black font-bold">Main Title One</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vitae mollitia eius
-                rem! Eaque,
-              </p>
+            </div>
+          </RouterLink>
+          <RouterLink
+            :to="{ name: 'DoctorsCv', params: { id: 'Dr_Taher_Ibrahim_Al_Tabet', ed: 8, pro: 9 } }"
+            class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
+          >
+            <div>
+              <img src="../assets/Dectors/1.jpeg" alt="" />
+            </div>
+            <div class="mt-4 mb-8 p-4">
+              <h3 class="text-xl text-black font-bold">Main Title One</h3>
+            </div>
+          </RouterLink>
+          <RouterLink
+            :to="{ name: 'DoctorsCv', params: { id: 'Eng_Khayri_Ali_Gharyani', ed: 3, pro: 5 } }"
+            class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
+          >
+            <div>
+              <img src="../assets/Dectors/1.jpeg" alt="" />
+            </div>
+            <div class="mt-4 mb-8 p-4">
+              <h3 class="text-xl text-black font-bold">Main Title One</h3>
+            </div>
+          </RouterLink>
+          <RouterLink
+            :to="{
+              name: 'DoctorsCv',
+              params: { id: 'Eng_Ezaddin_Hussen_Ashebeni', ed: 1, pro: 16 }
+            }"
+            class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
+          >
+            <div>
+              <img src="../assets/Dectors/1.jpeg" alt="" />
+            </div>
+            <div class="mt-4 mb-8 p-4">
+              <h3 class="text-xl text-black font-bold">Main Title One</h3>
             </div>
           </RouterLink>
         </div>

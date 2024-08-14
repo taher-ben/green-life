@@ -41,7 +41,7 @@
       Our Services
     </h3>
     <div class="grid xl:grid-cols-2 grid-cols-1 gap-4">
-      <router-link
+      <RouterLink
         v-for="index in services"
         :key="index"
         :to="{ name: 'ServiceDetails', params: { id: index } }"
@@ -57,7 +57,7 @@
           <img class="w-8" src="../assets/logo.png" alt="Company Logo" />
           <p class="text-white">Environmental Impact Studies</p>
         </div>
-      </router-link>
+      </RouterLink>
     </div>
   </div>
 </template>

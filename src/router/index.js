@@ -1,10 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory  } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
 import DoctorsCv from '../components/DoctorsCv.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -12,13 +11,13 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/ourteam/cv',
+      path: '/ourteam/:id/:ed/:pro',
       name: 'DoctorsCv',
       component: DoctorsCv,
       props:true
     },
     {
-      path: '/WhatWeOffer',
+      path: '/WhatOffer',
       name: 'WhatWeOffer',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -26,7 +25,7 @@ const router = createRouter({
       component: () => import('../views/WhatOffer.vue')
     },
     {
-      path: '/About',
+      path: '/AboutView',
       name: 'AboutView',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -73,6 +72,13 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/OurServices/ServicesEIA.vue')
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
 })
 export default router

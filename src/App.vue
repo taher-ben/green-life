@@ -1,11 +1,11 @@
 <template>
-  <header class="bg-gray-50 w-full" :dir="$i18n.locale == 'ar' ? 'rtl' : 'ltr'">
+  <header class="bg-gray-50 w-full">
     <div class="lg:container relative mx-auto z-40">
       <div class="flex justify-between">
         <div class="px-2 lg:w-52 w-40 py-2">
-          <router-link to="/">
+          <RouterLink to="/">
             <img src="./assets/greenlogo.png" alt="" />
-          </router-link>
+          </RouterLink>
         </div>
         <div
           class="lg:w-auto lg:h-auto lg:bg-transparent lg:relative"
@@ -16,44 +16,44 @@
         >
           <ul class="items-center h-full lg:flex">
             <li class="pb-4 lg:border-b-0 border-b-2 lg:pb-0">
-              <router-link active-class="text-green-500" class="px-2" to="/" @click="toggleMenu"
+              <RouterLink active-class="text-green-500" class="px-2" to="/" @click="toggleMenu"
                 >{{ $t('home') }}
-              </router-link>
+              </RouterLink>
             </li>
             <li class="pb-4 lg:border-b-0 border-b-2 lg:pb-0">
-              <router-link
+              <RouterLink
                 active-class="text-green-500"
                 class="px-2"
-                to="/WhatWeOffer"
+                to="/WhatOffer"
                 @click="toggleMenu"
-                >What We Offer</router-link
+                >{{ $t('our_services') }}</RouterLink
               >
             </li>
             <li class="pb-4 lg:border-b-0 border-b-2 lg:pb-0">
-              <router-link
+              <RouterLink
                 active-class="text-green-500"
                 class="px-2"
-                to="About"
+                to="/AboutView"
                 @click="toggleMenu"
-                >{{ $t('about') }}</router-link
+                >{{ $t('about') }}</RouterLink
               >
             </li>
             <li class="pb-4 lg:border-b-0 border-b-2 lg:pb-0">
-              <router-link
+              <RouterLink
                 active-class="text-green-500"
                 class="px-2"
                 to="/NewsAndSubject"
                 @click="toggleMenu"
-                >News</router-link
+                >{{ $t('News') }}</RouterLink
               >
             </li>
             <li class="pb-4 lg:border-b-0 border-b-2 lg:pb-0">
-              <router-link
+              <RouterLink
                 active-class="text-green-500"
                 class="px-2"
                 to="/ContactUs"
                 @click="toggleMenu"
-                >Contact Us</router-link
+                >{{ $t('contactus') }}</RouterLink
               >
             </li>
             <li
@@ -74,9 +74,9 @@
     </div>
   </header>
   <div class="leading-loose mx-auto px-2">
-    <RouterView :dir="$i18n.locale == 'ar' ? 'rtl' : 'ltr'" />
+    <RouterView />
   </div>
-  <footer class="bg-gray-950" :dir="$i18n.locale == 'ar' ? 'rtl' : 'ltr'">
+  <footer class="bg-gray-950">
     <div class="flex flex-col md:items-center items-start container p-8 mx-auto">
       <div class="w-40 mb-4">
         <img src="./assets/main-logo.png" alt="" />
@@ -84,16 +84,16 @@
       <div>
         <ul class="flex lg:flex-row flex-col mb-4">
           <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-            <router-link to="/about"> About Company </router-link>
+            <RouterLink to="/about"> About Company </RouterLink>
           </li>
           <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-            <router-link to="/WhatWeOffer"> What We Offer </router-link>
+            <RouterLink to="/WhatWeOffer"> What We Offer </RouterLink>
           </li>
           <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-            <router-link to="/"> contact us </router-link>
+            <RouterLink to="/"> contact us </RouterLink>
           </li>
           <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-            <router-link to="NewsAndSubject"> News And Subject </router-link>
+            <RouterLink to="NewsAndSubject"> News And Subject </RouterLink>
           </li>
         </ul>
       </div>
@@ -106,9 +106,7 @@
   </footer>
 </template>
 
-<script setup>
-import { RouterView } from 'vue-router'
-</script>
+<script setup></script>
 
 <script>
 export default {
