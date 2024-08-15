@@ -12,12 +12,14 @@
         "Marital_Status": "Married",
         "Contact": "najibbishr@marsellia.com"
       },
+      "Educationn": "Education",
       "Education": [
         "Bachelor of Pharmacy, Faculty of Pharmacy, Cairo University, Egypt, 1975-1982.",
         "Master of Public Health, Johns Hopkins Bloomberg School of Public Health (funded by USAID), 2008-2010.",
         "Diploma in Human Resources, Narita Academy/Cairo and Cambridge Training College/UK, 2009.",
         "Online Certificate in Introduction to Procurement and Supply Chain Management of Medical Commodities from the United Nations Development Programme (UNDP), 2016."
       ],
+      "Professional_Experiencee": "Professional Experience",
       "Professional_Experience": [
         "Chairman of the National Committee for Monitoring Adverse Events Following Immunization (AEFI) for all vaccinations in Libya since March 2023.",
         "Member of the Essential Drugs Selection Committee at the Ministry of Health in Libya.",
@@ -36,12 +38,14 @@
         "Marital_Status": "Married",
         "Contact": "n.droughi@marsellia.com"
       },
+      "Educationn": "Education",
       "Education": [
         "Bachelor's degree in Chemical Engineering from the Faculty of Engineering, University of Benghazi, 1971-1974.",
         "Master's degree in Environmental Engineering from the Faculty of Civil Engineering, Faculty of Engineering, Cairo University, 1975-1979.",
         "PhD in Environmental Engineering from the Department of Environmental Engineering, Faculty of Engineering, University of Kansai, Japan, 1979-1981.",
         "Postgraduate studies in Environmental and Occupational Health at the Faculty of Public Health, Sur University College, affiliated with Jilin University/China, 1990-1993."
       ],
+      "Professional_Experiencee": "Professional Experience",
       "Professional_Experience": [
         "Bachelor's degree in Chemical Engineering from the Faculty of Engineering, University of Benghazi, 1971-1974.",
         "Master's degree in Environmental Engineering from the Faculty of Civil Engineering, Faculty of Engineering, Cairo University, 1975-1979.",
@@ -56,6 +60,8 @@
         "Marital_Status": "Married",
         "Contact": "a.altabet@marsellia.com"
       },
+      "photo": "../assets/Dectors/9.jpg",
+      "Educationn": "Education",
       "Education": [
         "Assistant Lecturer in the Department of Medical Microbiology, Faculty of Medical Sciences, Sabha University, 1985-1990.",
         "Lecturer in the Virology Department, Faculty of Medical Sciences, Sabha University, 1991-1997.",
@@ -66,6 +72,7 @@
         "Contract Professor at the Faculty of Veterinary Medicine, University of Zawia, 1998-2000.",
         "Lecturer in Medical Mycology at the Faculty of Pharmacy, Tripoli University, 2004-2005."
       ],
+      "Professional_Experiencee": "Professional Experience",
       "Professional_Experience": [
         "Assistant Lecturer in Medical Microbiology at Sabha University (1985-1990).",
         "Lecturer in the Virology Department at Sabha University (1991-1997).",
@@ -80,16 +87,18 @@
     },
     "Eng_Khayri_Ali_Gharyani": {
       "About_Me": {
-        "neme": "Eng:Khayri Ali Gharyani",
+        "name": "Eng:Khayri Ali Gharyani",
         "Date_of_Birth": "January_15,_1964",
         "Marital_Status": "Married",
         "Contact": "khairy@marsellia.com"
       },
+      "Educationn": "Education",
       "Education": [
         "Bachelor of Engineering: Civil Engineering - 85/1986 Tripoli University.",
         "High Diploma with Distinction: Hydraulic engineering, Sep 90 to Sep 91, IHE Delft-Netherlands.",
         "M.Sc in Engineering Management: (has been completed in April 2022), Tripoli University, Tripoli-Libya. 1997-2007."
       ],
+      "Professional_Experiencee": "Professional Experience",
       "Professional_Experience": [
         "April 2021 – Present: Business Development Manager, Bonyan Consulting Engineers",
         "Responsibilities: Lead the business development efforts, identify new opportunities and foster partnerships.",
@@ -105,9 +114,11 @@
         "Marital_Status": "Married",
         "Contact": "ezzedin@marsellia.com"
       },
+      "Educationn": "Education",
       "Education": [
         "1989: Science University (Zawiya) Faculty of Chemistry (Graduated as chemist)"
       ],
+      "Professional_Experiencee": "Professional Experience",
       "Professional_Experience": [
         "1992: Almaya Pharmaceuticals Factory (Supervisor of Physical-Chemical Department)",
         "1998: Analyzing of drugs in ways that separation (chromatography) and methods of the color spectrum of the National Authority for Research (Egypt)",

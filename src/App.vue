@@ -84,10 +84,10 @@
       <div>
         <ul class="flex lg:flex-row flex-col mb-4">
           <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-            <RouterLink to="/about"> About Company </RouterLink>
+            <RouterLink to="/AboutView"> About Company </RouterLink>
           </li>
           <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
-            <RouterLink to="/WhatWeOffer"> What We Offer </RouterLink>
+            <RouterLink to="/WhatOffer"> What We Offer </RouterLink>
           </li>
           <li class="capitalize px-2 md:my-0 my-4 text-gray-200 hover:text-gray-400">
             <RouterLink to="/"> contact us </RouterLink>

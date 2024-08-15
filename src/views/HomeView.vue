@@ -60,10 +60,12 @@
             'slide-out-left': currentBoxIndex > index
           }"
         >
-          <p class="text-2xl pb-8 text-black">
-            {{ box.title }}
-          </p>
-          <p class="leading-loose text-gray-500 text-justify">{{ box.content }}</p>
+          <div class="w-10/12">
+            <p class="text-2xl pb-8 text-black">
+              {{ box.title }}
+            </p>
+            <p class="leading-loose text-gray-500 text-justify">{{ box.content }}</p>
+          </div>
         </div>
         <div
           class="transition-transform duration-500 ease-in-out md:w-6/12"
@@ -143,7 +145,7 @@
             class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
           >
             <div>
-              <img src="../assets/Dectors/1.jpeg" alt="" />
+              <img src="../assets/Dectors/9.jpg" alt="" />
             </div>
             <div class="mt-4 mb-8 p-4">
               <h3 class="text-xl text-black font-bold">Main Title One</h3>
