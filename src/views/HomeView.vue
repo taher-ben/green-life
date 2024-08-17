@@ -19,7 +19,7 @@
         </p>
         <RouterLink
           class="py-4 px-4 bg-gradient-to-l from-green-400 to-green-500 text-white font-extrabold rounded-full transition ease-in-out duration-500 transform hover:duration-500 hover:bg-gradient-to-l hover:from-green-400 hover:to-green-500 hover:scale-105 hover:rotate-1 hover:shadow-xl"
-          to="/about"
+          to="/"
         >
           About Company
         </RouterLink>
@@ -107,16 +107,11 @@
       </h2>
       <span class="md:w-5/6 w-3/6 h-1 bg-gray-100"></span>
     </div>
-    <div
-      class="flex items-center"
-      @touchstart="handleTouchStart"
-      @touchmove="handleTouchMove"
-      @touchend="handleTouchEnd"
-    >
+    <div class="flex items-center">
       <div class="md:w-[45%] max_md:w-full overflow-hidden relative">
         <div
-          class="flex justify-between transition-transform duration-500 ease-in-out md:hidden my-8 shadow-inner"
-          :style="{ transform: `translateX(-${currentIndex * 90}%)` }"
+          ref="scrollContainer"
+          class="flex mian justify-between scroll-smooth ease-in-out md:hidden my-8 shadow-inner overflow-x-auto"
         >
           <RouterLink
             :to="{ name: 'DoctorsCv', params: { id: 'Dr_Najib_Ali_Bishr', ed: 4, pro: 8 } }"
@@ -194,13 +189,13 @@
             @click="prevox"
             class="p-4 mx rounded-full bg-gradient-to-l from-green-500 to-green-600 mx-1 text-white cursor-pointer max_md:hidden"
           >
-            <font-awesome-icon :icon="['fas', 'arrow-left']" />
+            <font-awesome-icon @click="scrollLeft" :icon="['fas', 'arrow-left']" />
           </div>
           <div
             @click="nextox"
             class="p-4 rounded-full bg-gradient-to-l from-green-500 to-green-600 mx-1 text-white cursor-pointer max_md:hidden"
           >
-            <font-awesome-icon :icon="['fas', 'arrow-right']" />
+            <font-awesome-icon @click="scrollRight" :icon="['fas', 'arrow-right']" />
           </div>
         </div>
       </div>
@@ -215,12 +210,12 @@ const boxes = ref([
   {
     title: 'To make The title more convincing',
     content:
-      'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper.'
+      'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper.'
   },
   {
     title: 'To make The title more convincing',
     content:
-      'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new Ramboll whitepaper.'
+      'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper.'
   }
 ])
 
@@ -235,10 +230,9 @@ const prevBox = () => {
 </script>
 
 <style scoped>
-.hidden {
+.mian::-webkit-scrollbar {
   display: none;
 }
-
 .box {
   transition: all 0.5s ease-in-out;
 }
@@ -365,61 +359,26 @@ const prevBox = () => {
 export default {
   data() {
     return {
-      pageWidth: window.innerWidth,
-      currentIndex: 0,
-      startX: 0,
-      startY: 0,
-      deltaX: 0,
-      deltaY: 0
+      withExperts: null
     }
   },
-  // mounted() {
-  //   setInterval(this.nextBox, 5000);
-  // },
+
   methods: {
-    updatePageWidth() {
-      this.pageWidth = window.innerWidth
-      if (this.pageWidth > 787) {
-        console.log(this.pageWidth.value)
-        return 45
-      } else {
-        return 100
-      }
+    scrollLeft() {
+      const container = this.$refs.scrollContainer
+
+      container.scrollLeft -= 200
     },
-    nextox() {
-      this.currentIndex = (this.currentIndex + 1) % 3
+    scrollRight() {
+      const container = this.$refs.scrollContainer
+      container.scrollLeft += 230
     },
-    prevox() {
-      this.currentIndex = (this.currentIndex - 1 + 4) % 4
-    },
-    handleTouchStart(e) {
-      this.startX = e.touches[0].clientX
-      this.startY = e.touches[0].clientY
-    },
-    handleTouchMove(e) {
-      this.deltaX = e.touches[0].clientX - this.startX
-      this.deltaY = e.touches[0].clientY - this.startY
-    },
-    handleTouchEnd() {
-      if (Math.abs(this.deltaX) > Math.abs(this.deltaY)) {
-        if (this.deltaX > 30) {
-          this.prevox()
-        } else if (this.deltaX < -30) {
-          this.nextBox()
-        }
-      }
-      this.startX = 0
-      this.startY = 0
-      this.deltaX = 0
-      this.deltaY = 0
+    Withsize() {
+      this.withExperts = this.$refs.Withsize
     }
   },
-  computed: {},
-  created() {
-    window.addEventListener('resize', this.updatePageWidth)
-  },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.updatePageWidth)
+  mounted() {
+    this.Withsize()
   }
 }
 </script>

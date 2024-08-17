@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-gray-50 w-full">
+  <header :dir="$i18n.locale == 'ar' ? 'rtl' : 'ltr'" class="bg-gray-50 w-full">
     <div class="lg:container relative mx-auto z-40">
       <div class="flex justify-between">
         <div class="px-2 lg:w-52 w-40 py-2">
@@ -73,10 +73,10 @@
       </div>
     </div>
   </header>
-  <div class="leading-loose mx-auto px-2">
+  <div :dir="$i18n.locale == 'ar' ? 'rtl' : 'ltr'" class="mx-auto leading-8 px-2">
     <RouterView />
   </div>
-  <footer class="bg-gray-950">
+  <footer :dir="$i18n.locale == 'ar' ? 'rtl' : 'ltr'" class="bg-gray-950">
     <div class="flex flex-col md:items-center items-start container p-8 mx-auto">
       <div class="w-40 mb-4">
         <img src="./assets/main-logo.png" alt="" />

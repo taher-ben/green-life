@@ -19,59 +19,57 @@ const router = createRouter({
     {
       path: '/WhatOffer',
       name: 'WhatWeOffer',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/WhatOffer.vue')
     },
     {
       path: '/AboutView',
       name: 'AboutView',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     },
     {
       path: '/NewsAndSubject',
       name: 'NewsAndSubject',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+
       component: () => import('../views/NewsAndSubject.vue')
     },
     {
       path: '/Accreditation',
       name: 'AccreDitation',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+
       component: () => import('../views/AccreDitation.vue')
     },
     {
       path: '/ContactUs',
       name: 'ContactUs',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+
       component: () => import('../views/ContactUs.vue')
     },
     {
-      path: '/ServicesEnv',
-      name: 'ServicesEnv',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/OurServices/ServicesEIA.vue')
+      path: '/ServicesAWSQME',
+      name: 'ServicesAWSQME',
+      component: () => import('../views/OurServices/ServicesAWSQME.vue')
     },
     {
-      path: '/ServicesEIA',
-      name: 'ServicesEIA',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/OurServices/ServicesEIA.vue')
+      path: '/ServicesWNRS',
+      name: 'ServicesWNRS',
+      component: () => import('../views/OurServices/ServicesWNRS.vue')
+    },
+    {
+      path: '/ServicesAWSQME',
+      name: 'ServicesAWSQME',
+      component: () => import('../views/OurServices/ServicesAWSQME.vue')
+    },
+    {
+      path: '/ServicesEATP',
+      name: 'ServicesEATP',
+      component: () => import('../views/OurServices/ServicesEATP.vue')
+    },
+    {
+      path: '/ServicesEC',
+      name: 'ServicesEC',
+      component: () => import('../views/OurServices/ServicesEC.vue')
     }
+    
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
