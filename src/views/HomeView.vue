@@ -118,7 +118,7 @@
             class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
           >
             <div>
-              <img src="../assets/Dectors/1.jpeg" alt="" />
+              <img src="../assets/Dectors/unknown.jpeg" alt="" />
             </div>
             <div class="mt-4 mb-8 p-4">
               <h3 class="text-xl text-black font-bold">{{}}</h3>
@@ -140,10 +140,10 @@
             class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
           >
             <div>
-              <img src="../assets/Dectors/9.jpg" alt="" />
+              <img src="../assets/Dectors/Dr_Taher_Ibrahim_Al_Tabet.jpg" alt="" />
             </div>
             <div class="mt-4 mb-8 p-4">
-              <h3 class="text-xl text-black font-bold">Main Title One</h3>
+              <h3 class="text-xl text-black font-bold">Dr Taher Ibrahim Al Tabet</h3>
             </div>
           </RouterLink>
           <RouterLink
@@ -151,10 +151,10 @@
             class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
           >
             <div>
-              <img src="../assets/Dectors/1.jpeg" alt="" />
+              <img src="../assets/Dectors/Eng_Khayri_Ali_Gharyani.jpg" alt="" />
             </div>
             <div class="mt-4 mb-8 p-4">
-              <h3 class="text-xl text-black font-bold">Main Title One</h3>
+              <h3 class="text-xl text-black font-bold">Eng Khayri Ali Gharyani</h3>
             </div>
           </RouterLink>
           <RouterLink
@@ -165,10 +165,10 @@
             class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
           >
             <div>
-              <img src="../assets/Dectors/1.jpeg" alt="" />
+              <img src="../assets/Dectors/Eng_Ezaddin_Hussen_Ashebeni.jpg" alt="" />
             </div>
             <div class="mt-4 mb-8 p-4">
-              <h3 class="text-xl text-black font-bold">Main Title One</h3>
+              <h3 class="text-xl text-black font-bold">Eng Ezaddin Hussen Ashebeni</h3>
             </div>
           </RouterLink>
         </div>
@@ -186,16 +186,16 @@
         </div>
         <div class="flex m-4 w-8">
           <div
-            @click="prevox"
+            @click="scrollLeft"
             class="p-4 mx rounded-full bg-gradient-to-l from-green-500 to-green-600 mx-1 text-white cursor-pointer max_md:hidden"
           >
-            <font-awesome-icon @click="scrollLeft" :icon="['fas', 'arrow-left']" />
+            <font-awesome-icon :icon="['fas', 'arrow-left']" />
           </div>
           <div
-            @click="nextox"
+            @click="scrollRight"
             class="p-4 rounded-full bg-gradient-to-l from-green-500 to-green-600 mx-1 text-white cursor-pointer max_md:hidden"
           >
-            <font-awesome-icon @click="scrollRight" :icon="['fas', 'arrow-right']" />
+            <font-awesome-icon :icon="['fas', 'arrow-right']" />
           </div>
         </div>
       </div>
@@ -366,15 +366,16 @@ export default {
   methods: {
     scrollLeft() {
       const container = this.$refs.scrollContainer
-
-      container.scrollLeft -= 200
+      container.scrollLeft -= 350
+      this.Withsize()
     },
     scrollRight() {
       const container = this.$refs.scrollContainer
-      container.scrollLeft += 230
+      container.scrollLeft += 280
     },
     Withsize() {
       this.withExperts = this.$refs.Withsize
+      console.log(this.withExperts)
     }
   },
   mounted() {
