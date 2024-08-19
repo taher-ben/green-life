@@ -7,21 +7,17 @@
           <h2
             class="text-2xl md:w-96 mb-8 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-700"
           >
-            Green Life Company's Commitment to Innovative Environmental Solutions.
+            {{ $t('contents.abouttitle') }}
           </h2>
         </div>
         <p class="mb-8">
-          At Green Life Company, our mission is to collaborate with all stakeholders to elevate
-          environmental commitment and promote environmental conservation through several integrated
-          aspects. We place great importance on monitoring pollution and assessing potential
-          environmental impacts, and we work on developing innovative environmental strategies and
-          solutions to mitigate negative environmental impacts.
+          {{ $t('contents.aboutcom') }}
         </p>
         <RouterLink
           class="py-4 px-4 bg-gradient-to-l from-green-400 to-green-500 text-white font-extrabold rounded-full transition ease-in-out duration-500 transform hover:duration-500 hover:bg-gradient-to-l hover:from-green-400 hover:to-green-500 hover:scale-105 hover:rotate-1 hover:shadow-xl"
           to="/"
         >
-          About Company
+          {{ $t('contents.aboutbut') }}
         </RouterLink>
       </div>
       <div class="md:w-6/12 flex justify-center relative">
@@ -39,7 +35,7 @@
     <div
       class="max_md:hidden text-2xl w-96 pt-16 px-6 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-700 before:absolute before:w-7/12 before:h-full before:top-0 before:left-0 before:bg-gray-100 before:-z-10"
     >
-      Our Projects and Initiatives in Environmental Protection
+      {{ $t('contents.titlefornewsandsubject') }}
     </div>
     <div ref="size" class="flex items-center justify-between flex-col-reverse md:flex-row mx-auto">
       <div
@@ -62,9 +58,11 @@
         >
           <div class="w-10/12">
             <p class="text-2xl pb-8 text-black">
-              {{ box.title }}
+              {{ $t(`news.${index + 1}.title`) }}
             </p>
-            <p class="leading-loose text-gray-500 text-justify">{{ box.content }}</p>
+            <p class="leading-loose text-gray-500 text-justify line-clamp-3">
+              {{ $t(`news.${index + 1}.paragraph`) }}
+            </p>
           </div>
         </div>
         <div
@@ -75,9 +73,9 @@
             'slide-out-left': currentBoxIndex > index
           }"
         >
-          <picture class="mx-2 w-full">
-            <img src="../assets/images/d0.jpg" alt="" />
-            <!-- <img src="../ assets / images / d1.jpg" alt=""> -->
+          <picture class="mx-2 w-full mt-4">
+            <source />
+            <img />
           </picture>
         </div>
       </div>
@@ -213,7 +211,7 @@ const boxes = ref([
       'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper.'
   },
   {
-    title: 'To make The title more convincing',
+    title: 'To makdde The title more convincing',
     content:
       'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper.'
   }
@@ -229,6 +227,100 @@ const prevBox = () => {
 }
 </script>
 
+<script>
+export default {
+  data() {
+    return {
+      withExperts: null
+    }
+  },
+
+  methods: {
+    scrollLeft() {
+      const container = this.$refs.scrollContainer
+      container.scrollLeft -= 350
+      this.Withsize()
+    },
+    scrollRight() {
+      const container = this.$refs.scrollContainer
+      container.scrollLeft += 280
+    },
+    Withsize() {
+      this.withExperts = this.$refs.Withsize
+      console.log(this.withExperts)
+    }
+  },
+  mounted() {
+    this.Withsize()
+  }
+}
+</script>
+<style>
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: wave-animation 8s infinite;
+  opacity: 0;
+}
+
+.small-circle {
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+  animation-delay: 0s;
+}
+
+.medium-circle {
+  width: 100px;
+  height: 100px;
+  border: 1px solid gray;
+  animation-delay: 2s;
+}
+
+.large-circle {
+  width: 150px;
+  height: 150px;
+  border: 1px solid gray;
+  animation-delay: 4s;
+}
+
+.extra-large-circle {
+  width: 200px;
+  height: 200px;
+  border: 1px solid gray;
+  animation-delay: 6s;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+</style>
+
+<style scoped>
+.box img {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.w-full {
+  width: 100%;
+}
+</style>
 <style scoped>
 .mian::-webkit-scrollbar {
   display: none;
@@ -299,101 +391,5 @@ const prevBox = () => {
     transform: translateX(100%);
     opacity: 0;
   }
-}
-</style>
-
-<style>
-.circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: wave-animation 8s infinite;
-  opacity: 0;
-}
-
-.small-circle {
-  width: 50px;
-  height: 50px;
-  border: 1px solid gray;
-  animation-delay: 0s;
-}
-
-.medium-circle {
-  width: 100px;
-  height: 100px;
-  border: 1px solid gray;
-  animation-delay: 2s;
-}
-
-.large-circle {
-  width: 150px;
-  height: 150px;
-  border: 1px solid gray;
-  animation-delay: 4s;
-}
-
-.extra-large-circle {
-  width: 200px;
-  height: 200px;
-  border: 1px solid gray;
-  animation-delay: 6s;
-}
-
-@keyframes wave-animation {
-  0%,
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
-  }
-
-  50% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-</style>
-
-<script>
-export default {
-  data() {
-    return {
-      withExperts: null
-    }
-  },
-
-  methods: {
-    scrollLeft() {
-      const container = this.$refs.scrollContainer
-      container.scrollLeft -= 350
-      this.Withsize()
-    },
-    scrollRight() {
-      const container = this.$refs.scrollContainer
-      container.scrollLeft += 280
-    },
-    Withsize() {
-      this.withExperts = this.$refs.Withsize
-      console.log(this.withExperts)
-    }
-  },
-  mounted() {
-    this.Withsize()
-  }
-}
-</script>
-
-<style scoped>
-.box img {
-  width: 100%;
-}
-
-.flex {
-  display: flex;
-}
-
-.w-full {
-  width: 100%;
 }
 </style>

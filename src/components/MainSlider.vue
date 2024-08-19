@@ -7,39 +7,27 @@
       >
         <div class="w-full">
           <picture>
-            <img class="w-full md:hidden block" src="../assets/images/d22.jpg" />
-            <img class="h-full md:block hidden" src="../assets/images/d1.jpg" />
+            <img class="w-full md:hidden block" src="../assets/images/small/7.jpg " />
+            <img class="h-full md:block hidden" src="../assets/images/big/7.jpg" />
           </picture>
         </div>
         <div class="w-full">
           <picture>
-            <img class="w-full md:hidden block" src="../assets/images/d22.jpg" />
-            <img class="h-full md:block hidden" src="../assets/images/d1.jpg" />
+            <img class="w-full md:hidden block" src="../assets/images/small/5.jpg" />
+            <img class="h-full md:block hidden" src="../assets/images/big/5.jpg" />
           </picture>
         </div>
         <div class="w-full">
           <picture>
-            <img class="w-full md:hidden block" src="../assets/images/d22.jpg" />
-            <img class="h-full md:block hidden" src="../assets/images/d0.jpg" />
-          </picture>
-        </div>
-        <div class="w-full">
-          <picture>
-            <img class="w-full md:hidden block" src="../assets/images/d22.jpg" />
-            <img class="h-full md:block hidden" src="../assets/images/d1.jpg" />
-          </picture>
-        </div>
-        <div class="w-full">
-          <picture>
-            <img class="w-full md:hidden block" src="../assets/images/d22.jpg" />
-            <img class="h-full md:block hidden" src="../assets/images/d0.jpg" />
+            <img class="w-full md:hidden block" src="../assets/images/small/2.jpg" />
+            <img class="h-full md:block hidden" src="../assets/images/big/2.jpg" />
           </picture>
         </div>
       </div>
       <div class="overflow-x-auto md:absolute md:bottom-0 md:overflow-hidden slideNumerContainer">
         <div class="flex w-max md:min-w-[1500px]">
           <div
-            v-for="(item, index) in 4"
+            v-for="(item, index) in 3"
             :key="index"
             @click="show(index)"
             :class="{
@@ -50,9 +38,9 @@
           >
             <div>
               <span>{{ index + 1 }}</span
-              ><span class="opinter">/4</span>
+              ><span class="opinter">/3</span>
             </div>
-            <h5 class="text-white">main title wmidth</h5>
+            <h5 class="text-white text-sm">{{ $t(`titles.${index + 1}`) }}</h5>
           </div>
         </div>
       </div>
@@ -75,7 +63,7 @@ const show = (index) => {
 const updateWidth = () => {
   if (wid.value) {
     const width = wid.value.offsetWidth
-    nextWidth.value = width * 5
+    nextWidth.value = width * 3
   }
   show(0)
 }

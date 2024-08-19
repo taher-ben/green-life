@@ -75,7 +75,7 @@ export default {
   },
   methods: {
     setPhoto() {
-      this.pic = this.images[this.id] || '' // تعيين الصورة بناءً على المعرف
+      this.pic = this.images[this.id] || '' 
     }
   }
 }
