@@ -14,7 +14,7 @@
       </div>
     </div>
   </div>
-  <div class="">
+  <div class="lg:w-[60rem] mx-auto py-16 px-2">
     <div class="pb-2">
       <h3 class="py-3 text-2xl text-green-600">{{ $t('ourservices.3.title') }}</h3>
       <p class="pb-2">{{ $t('ourservices.3.head') }}</p>

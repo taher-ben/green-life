@@ -40,7 +40,7 @@
               <span>{{ index + 1 }}</span
               ><span class="opinter">/3</span>
             </div>
-            <h5 class="text-white text-sm">{{ $t(`titles.${index + 1}`) }}</h5>
+            <h5 class="text-white text-sm">{{ $t(`titles_for_slider.${index + 1}`) }}</h5>
           </div>
         </div>
       </div>

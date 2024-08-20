@@ -4,7 +4,13 @@
   "our_services": "Our Services",
   "News": "News",
   "contactus": "Contact Us",
-  "titles": {
+  "content": {
+    "linetitle": "Pioneers in Environmental Sustainability",
+    "title_experts": "Pioneers in Environmental Sustainability",
+    "title_experts_2": "The Experts of Green Life Company",
+    "paragraph_experts": "At Green Life Environmental Studies Company, we take pride in our team of experts and specialists who have many years of experience in the field of environment and sustainability. Our team includes a select group of scientists, engineers, and environmental consultants who have dedicated their professional lives to serving the environment and contributing to a more sustainable future."
+  },
+  "titles_for_slider": {
     "1": "Joint emissions monitoring with environmental authorities.",
     "2": "Green Life Laboratories for Advanced Environmental Research",
     "3": "Environmental recovery support post-Hurricane Daniel."
@@ -311,5 +317,11 @@
     "aboutcom": "At Green Life Company, our mission is to collaborate with all stakeholders to elevate environmental commitment and promote environmental conservation through several integrated aspects. We place great importance on monitoring pollution and assessing potential environmental impacts, and we work on developing innovative environmental strategies and solutions to mitigate negative environmental impacts.",
     "aboutbut": "About Company",
     "titlefornewsandsubject": "Our Projects and Initiatives in Environmental Protection"
+  },
+  "whatoffer": {
+    "headtitle": "Our Company",
+    "headparagraph": "Based on the principles of preserving the environment, protecting its resources, and achieving ecological balance, Green Life was established as an environmental consultancy company specializing in conducting environmental assessments according to standard specifications and approved technical standards.",
+    "paragraph_1": "We at Green Life Company offer a wide range of services aimed at improving the environment and achieving sustainable development. Our services focus on providing innovative and effective solutions to current environmental problems, with a commitment to sound environmental practices and international standards.",
+    "paragraph_2": "Explore our diverse services and discover how we can help you achieve your environmental goals. Through our services, we aim to support local communities and businesses on their journey towards a more sustainable future. We provide solutions in the fields of sustainable agriculture, waste management, renewable energy, environmental awareness, and other vital areas."
   }
 }

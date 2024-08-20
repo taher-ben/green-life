@@ -41,8 +41,9 @@
 <script>
 import Dr_Taher_Ibrahim_Al_Tabet from '../assets/Dectors/Dr_Taher_Ibrahim_Al_Tabet.jpg'
 import Eng_Khayri_Ali_Gharyani from '../assets/Dectors/Eng_Khayri_Ali_Gharyani.jpg'
-import Dr_Najib_Ali_Bishr from '../assets/Dectors/2.jpeg'
+import Dr_Najib_Ali_Bishr from '../assets/Dectors/Unknown.jpg'
 import Eng_Ezaddin_Hussen_Ashebeni from '../assets/Dectors/Eng_Ezaddin_Hussen_Ashebeni.jpg'
+import Dr_Nouri_Ali_Eldroughi from '../assets/Dectors/Unknown.jpg'
 
 export default {
   data() {
@@ -51,7 +52,8 @@ export default {
         Dr_Taher_Ibrahim_Al_Tabet: Dr_Taher_Ibrahim_Al_Tabet,
         Eng_Khayri_Ali_Gharyani: Eng_Khayri_Ali_Gharyani,
         Dr_Najib_Ali_Bishr: Dr_Najib_Ali_Bishr,
-        Eng_Ezaddin_Hussen_Ashebeni: Eng_Ezaddin_Hussen_Ashebeni
+        Eng_Ezaddin_Hussen_Ashebeni: Eng_Ezaddin_Hussen_Ashebeni,
+        Dr_Nouri_Ali_Eldroughi: Dr_Nouri_Ali_Eldroughi
       },
       pic: ''
     }
@@ -75,7 +77,7 @@ export default {
   },
   methods: {
     setPhoto() {
-      this.pic = this.images[this.id] || '' 
+      this.pic = this.images[this.id] || ''
     }
   }
 }

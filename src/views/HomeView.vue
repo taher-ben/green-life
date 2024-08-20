@@ -75,7 +75,7 @@
         >
           <picture class="mx-2 w-full mt-4">
             <source />
-            <img />
+            <img :src="pics[index]" />
           </picture>
         </div>
       </div>
@@ -101,7 +101,7 @@
       <h2
         class="md:w-1/6 w-3/6 text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-700"
       >
-        Pioneers in Environmental Sustainability
+        {{ $t('content.linetitle') }}
       </h2>
       <span class="md:w-5/6 w-3/6 h-1 bg-gray-100"></span>
     </div>
@@ -116,10 +116,12 @@
             class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
           >
             <div>
-              <img src="../assets/Dectors/unknown.jpeg" alt="" />
+              <img src="../assets/Dectors/Unknown.jpg" alt="" />
             </div>
             <div class="mt-4 mb-8 p-4">
-              <h3 class="text-xl text-black font-bold">{{}}</h3>
+              <h3 class="text-xl text-black font-bold">
+                {{ $t('experts.Dr_Nouri_Ali_Eldroughi.About_Me.name') }}
+              </h3>
             </div>
           </RouterLink>
           <RouterLink
@@ -127,10 +129,12 @@
             class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
           >
             <div>
-              <img src="../assets/Dectors/1.jpeg" alt="" />
+              <img src="../assets/Dectors/Unknown.jpg" alt="" />
             </div>
             <div class="mt-4 mb-8 p-4">
-              <h3 class="text-xl text-black font-bold">Main Title One</h3>
+              <h3 class="text-xl text-black font-bold">
+                {{ $t('experts.Dr_Najib_Ali_Bishr.About_Me.name') }}
+              </h3>
             </div>
           </RouterLink>
           <RouterLink
@@ -141,7 +145,9 @@
               <img src="../assets/Dectors/Dr_Taher_Ibrahim_Al_Tabet.jpg" alt="" />
             </div>
             <div class="mt-4 mb-8 p-4">
-              <h3 class="text-xl text-black font-bold">Dr Taher Ibrahim Al Tabet</h3>
+              <h3 class="text-xl text-black font-bold">
+                {{ $t('experts.Dr_Taher_Ibrahim_Al_Tabet.About_Me.name') }}
+              </h3>
             </div>
           </RouterLink>
           <RouterLink
@@ -152,7 +158,9 @@
               <img src="../assets/Dectors/Eng_Khayri_Ali_Gharyani.jpg" alt="" />
             </div>
             <div class="mt-4 mb-8 p-4">
-              <h3 class="text-xl text-black font-bold">Eng Khayri Ali Gharyani</h3>
+              <h3 class="text-xl text-black font-bold">
+                {{ $t('experts.Eng_Khayri_Ali_Gharyani.About_Me.name') }}
+              </h3>
             </div>
           </RouterLink>
           <RouterLink
@@ -166,20 +174,18 @@
               <img src="../assets/Dectors/Eng_Ezaddin_Hussen_Ashebeni.jpg" alt="" />
             </div>
             <div class="mt-4 mb-8 p-4">
-              <h3 class="text-xl text-black font-bold">Eng Ezaddin Hussen Ashebeni</h3>
+              <h3 class="text-xl text-black font-bold">
+                {{ $t('experts.Eng_Ezaddin_Hussen_Ashebeni.About_Me.name') }}
+              </h3>
             </div>
           </RouterLink>
         </div>
       </div>
       <div class="w-5/12 max_md:hidden mx-8">
         <div>
-          <h2 class="text-2xl text-black mb-4">The Experts of Green Life Company</h2>
+          <h2 class="text-2xl text-black mb-4">{{ $t('content.title_experts_2') }}</h2>
           <p class="text-gray-500">
-            At Green Life Environmental Studies Company, we take pride in our team of experts and
-            specialists who have many years of experience in the field of environment and
-            sustainability. Our team includes a select group of scientists, engineers, and
-            environmental consultants who have dedicated their professional lives to serving the
-            environment and contributing to a more sustainable future.
+            {{ $t('content.paragraph_experts') }}
           </p>
         </div>
         <div class="flex m-4 w-8">
@@ -228,10 +234,13 @@ const prevBox = () => {
 </script>
 
 <script>
+import image_1 from '../assets/images/big/1.jpg'
+import image_2 from '../assets/images/big/2.jpg'
 export default {
   data() {
     return {
-      withExperts: null
+      withExperts: null,
+      pics: [image_1, image_2]
     }
   },
 
