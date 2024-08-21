@@ -28,11 +28,11 @@
     <h3
       class="pb-8 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-green-400 to-green-700"
     >
-      Our Services
+      {{ $t('our_services') }}
     </h3>
     <div class="grid xl:grid-cols-2 grid-cols-1 gap-4">
       <RouterLink
-        to="/"
+        to="ServicesEC"
         class="relative mt-2 before:hover:opacity-80 before:transition before:duration-200 before:w-full before:absolute before:bottom-0 before:left-0 before:h-full before:bg-gradient-to-t before:opacity-70 from-black to-transparent"
       >
         <img
@@ -47,6 +47,7 @@
         </div>
       </RouterLink>
       <RouterLink
+        to="ServicesEIA"
         class="relative mt-2 before:hover:opacity-80 before:transition before:duration-200 before:w-full before:absolute before:bottom-0 before:left-0 before:h-full before:bg-gradient-to-t before:opacity-70 from-black to-transparent"
       >
         <img
@@ -61,6 +62,7 @@
         </div>
       </RouterLink>
       <RouterLink
+        to="ServicesAWSQME"
         class="relative mt-2 before:hover:opacity-80 before:transition before:duration-200 before:w-full before:absolute before:bottom-0 before:left-0 before:h-full before:bg-gradient-to-t before:opacity-70 from-black to-transparent"
       >
         <img
@@ -75,12 +77,13 @@
         </div>
       </RouterLink>
       <RouterLink
+        to="ServicesWNRS"
         class="relative mt-2 before:hover:opacity-80 before:transition before:duration-200 before:w-full before:absolute before:bottom-0 before:left-0 before:h-full before:bg-gradient-to-t before:opacity-70 from-black to-transparent"
       >
         <img
           class="shadow-sm shadow-white w-full h-full object-cover"
           loading="lazy"
-          src="../assets/background4.jpg"
+          src="../assets/images/big/1.jpg"
           alt="Service Background"
         />
         <div class="absolute h-full top-0 flex flex-col justify-between p-3">
@@ -89,12 +92,13 @@
         </div>
       </RouterLink>
       <RouterLink
+        to="ServicesEATP"
         class="relative mt-2 before:hover:opacity-80 before:transition before:duration-200 before:w-full before:absolute before:bottom-0 before:left-0 before:h-full before:bg-gradient-to-t before:opacity-70 from-black to-transparent"
       >
         <img
           class="shadow-sm shadow-white w-full h-full object-cover"
           loading="lazy"
-          src="../assets/background2.jpg"
+          src="../assets/background5.jpg"
           alt="Service Background"
         />
         <div class="absolute h-full top-0 flex flex-col justify-between p-3">
@@ -107,17 +111,9 @@
 </template>
 
 <script>
-import background1 from '@/assets/services/background1.jpg'
-import background2 from '@/assets/services/background2.jpg'
-import background3 from '@/assets/services/background3.jpg'
-import background4 from '@/assets/services/background4.jpg'
-import background5 from '@/assets/services/background5.jpg'
 export default {
   data() {
-    return {
-      services: [1, 2, 3, 4, 5],
-      images: [background1, background2, background3, background4, background5]
-    }
+    return {}
   }
 }
 </script>

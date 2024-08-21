@@ -8,22 +8,18 @@
               <h3
                 class="text-2xl font-bold w-fit relative before:absolute before:w-4/6 before:rounded-full before:h-1 before:bg-green-500 before:bottom-0 pb-2"
               >
-                Contact Us
+                {{ $t('content.ContactUs.title') }}
               </h3>
               <p>
-                At Green Life Environmental Studies Company, we are committed to providing
-                sustainable services and solutions to our clients. You can contact us via phone or
-                email for any inquiries or feedback, as we have a specialized team available to
-                respond and provide the necessary support to ensure your satisfaction. We look
-                forward to collaborating with you for a more sustainable future.
+                {{ $t('content.ContactUs.description') }}
               </p>
             </div>
             <vee-form>
               <div class="flex flex-col lg:w-8/12 w-full">
                 <div class="mt-3">
-                  <label for="name" class="block capitalize text-sm font-medium text-slate-700"
-                    >Name</label
-                  >
+                  <label for="name" class="block capitalize text-sm font-medium text-slate-700">
+                    {{ $t('content.ContactUs.name_label') }}
+                  </label>
                   <vee-field
                     name="name"
                     type="text"
@@ -31,9 +27,9 @@
                   />
                 </div>
                 <div class="mt-3">
-                  <label for="email" class="block text-sm capitalize font-medium text-slate-700"
-                    >Email</label
-                  >
+                  <label for="email" class="block text-sm capitalize font-medium text-slate-700">
+                    {{ $t('content.ContactUs.email_label') }}
+                  </label>
                   <vee-field
                     name="email"
                     type="email"
@@ -41,9 +37,9 @@
                   />
                 </div>
                 <div class="mt-3">
-                  <label for="message" class="block text-sm capitalize font-medium text-slate-700"
-                    >Message</label
-                  >
+                  <label for="message" class="block text-sm capitalize font-medium text-slate-700">
+                    {{ $t('content.ContactUs.message_label') }}
+                  </label>
                   <vee-field
                     name="message"
                     class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
@@ -55,7 +51,7 @@
                   type="submit"
                   class="px-6 py-2 my-4 text-transparent bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full capitalize"
                 >
-                  Send
+                  {{ $t('content.ContactUs.send_button') }}
                 </button>
               </div>
             </vee-form>
@@ -79,8 +75,8 @@
                 :icon="['fas', 'map-location-dot']"
               />
               <div class="ps-4">
-                <h4 class="black text-xl">Location</h4>
-                <p class="capitalize text-lg">Libya - Tripole - hai alandalus</p>
+                <h4 class="black text-xl">{{ $t('content.ContactUs.location_title') }}</h4>
+                <p class="capitalize text-lg">{{ $t('content.ContactUs.location_value') }}</p>
               </div>
             </div>
             <div class="flex lg:flex-row flex-col w-full justify-center items-center">
@@ -89,9 +85,9 @@
                 :icon="['fas', 'phone']"
               />
               <div class="ps-4">
-                <h4 class="black text-xl">Location</h4>
-                <p class="capitalize text-lg">+218 91 217 0803</p>
-                <p class="capitalize text-lg">+218 91 217 0803</p>
+                <h4 class="black text-xl">{{ $t('content.ContactUs.phone_title') }}</h4>
+                <p class="capitalize text-lg">{{ $t('content.ContactUs.phone_value_1') }}</p>
+                <p class="capitalize text-lg">{{ $t('content.ContactUs.phone_value_2') }}</p>
               </div>
             </div>
             <div class="flex lg:flex-row flex-col w-full justify-center items-center">
@@ -100,8 +96,8 @@
                 :icon="['fas', 'envelope-open']"
               />
               <div class="ps-4">
-                <h4 class="black text-xl">Email</h4>
-                <p class="capitalize text-lg">info@greenlife.ly</p>
+                <h4 class="black text-xl">{{ $t('content.ContactUs.email_title') }}</h4>
+                <p class="capitalize text-lg">{{ $t('content.ContactUs.email_value') }}</p>
               </div>
             </div>
           </div>
@@ -110,11 +106,9 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
-  name: 'ContactUs',
-  data() {
-    return {}
-  }
+  name: 'content.ContactUs'
 }
 </script>

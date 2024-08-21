@@ -7,6 +7,7 @@ import i18n from './i18n'
 import App from './App.vue'
 import router from './router'
 import ButtomMain from './components/ButtomMain.vue'
+import SerCom from './components/SerCom.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ButtomHover from './components/ButtomHover.vue'
@@ -32,6 +33,7 @@ library.add(faBars, faGlobe, faAnglesUp, faLocationDot, faArrowRight, faArrowLef
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.component('ButtomMain', ButtomMain)
+app.component('SerCom', SerCom)
 app.component('ButtomHover', ButtomHover)
 
 

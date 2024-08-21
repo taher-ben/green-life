@@ -1,6 +1,8 @@
 <template>
   <div class="container mx-auto">
-    <div class="lg:grid grid-cols-2 gap-6 flex flex-col-reverse py-8 2xl:w-[100rem] mx-auto">
+    <div
+      class="lg:grid grid-cols-2 gap-6 flex flex-col-reverse py-8 2xl:w-[100rem] min-h-screen mx-auto"
+    >
       <div class="pt-16 px-2">
         <h3 class="text-2xl text-green-600 font-semibold">
           {{ $t(`experts.${id}.About_Me.name`) }}
@@ -40,7 +42,7 @@
 
 <script>
 import Dr_Taher_Ibrahim_Al_Tabet from '../assets/Dectors/Dr_Taher_Ibrahim_Al_Tabet.jpg'
-import Eng_Khayri_Ali_Gharyani from '../assets/Dectors/Eng_Khayri_Ali_Gharyani.jpg'
+import Eng_Khayri_Ali_Gharyani from '../assets/Dectors/Unknown.jpg'
 import Dr_Najib_Ali_Bishr from '../assets/Dectors/Unknown.jpg'
 import Eng_Ezaddin_Hussen_Ashebeni from '../assets/Dectors/Eng_Ezaddin_Hussen_Ashebeni.jpg'
 import Dr_Nouri_Ali_Eldroughi from '../assets/Dectors/Unknown.jpg'

@@ -45,9 +45,9 @@ const router = createRouter({
       component: () => import('../views/ContactUs.vue')
     },
     {
-      path: '/ServicesAWSQME',
-      name: 'ServicesAWSQME',
-      component: () => import('../views/OurServices/ServicesAWSQME.vue')
+      path: '/ServicesEIA',
+      name: 'ServicesEIA',
+      component: () => import('../views/OurServices/ServicesEIA.vue')
     },
     {
       path: '/ServicesWNRS',

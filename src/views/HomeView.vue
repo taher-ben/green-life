@@ -155,7 +155,7 @@
             class="box flex-none shadow-xl w-96 mx-2 rounded-sm"
           >
             <div>
-              <img src="../assets/Dectors/Eng_Khayri_Ali_Gharyani.jpg" alt="" />
+              <img src="../assets/Dectors/Unknown.jpg" alt="" />
             </div>
             <div class="mt-4 mb-8 p-4">
               <h3 class="text-xl text-black font-bold">
@@ -256,7 +256,6 @@ export default {
     },
     Withsize() {
       this.withExperts = this.$refs.Withsize
-      console.log(this.withExperts)
     }
   },
   mounted() {

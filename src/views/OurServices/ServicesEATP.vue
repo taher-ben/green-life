@@ -10,10 +10,10 @@
         </p>
       </div>
       <div class="h-full">
-        <img class="" src="../../assets/background2.jpg" alt="Background image" />
+        <img class="" src="../../assets/background5.jpg" alt="Background image" />
       </div>
     </div>
-    <div class="">
+    <div class="lg:w-[60rem] mx-auto py-16 px-2">
       <div class="pb-2">
         <h3 class="py-3 text-2xl text-green-600">{{ $t('ourservices.5.title') }}</h3>
         <p class="pb-2">{{ $t('ourservices.5.head') }}</p>

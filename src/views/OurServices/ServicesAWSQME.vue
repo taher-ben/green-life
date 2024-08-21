@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="h-full">
-        <img class="" src="../../assets/background2.jpg" alt="Background image" />
+        <img class="" src="../../assets/background3.jpg" alt="Background image" />
       </div>
     </div>
   </div>
