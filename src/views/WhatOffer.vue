@@ -1,18 +1,16 @@
 <template>
   <div>
-    <div class="grid lg:grid-cols-2 grid-cols-1">
-      <div class="bg-green-950 p-4 flex flex-col justify-center">
-        <h4 class="text-green-500 underline underline-offset-4">{{ $t('whatoffer.headtitle') }}</h4>
-        <p class="text-white text-xl text-balance">
+    <div class="bg-gray-200 px-4 mb-4 text-center">
+      <div class="p-4 pt-16 flex flex-col justify-center">
+        <h4 class="text-green-500 text-2xl mb-4 underline underline-offset-8">
+          {{ $t('whatoffer.headtitle') }}
+        </h4>
+        <p class="text-black text-xl text-balance">
           {{ $t('whatoffer.headparagraph') }}
         </p>
       </div>
-      <div class="h-full">
-        <img
-          class="w-full h-full object-cover"
-          src="../assets/background2.jpg"
-          alt="Company Background"
-        />
+      <div class="relative top-[45px]">
+        <img src="../assets/background2.jpg" alt="" />
       </div>
     </div>
   </div>

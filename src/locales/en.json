@@ -3,7 +3,9 @@
   "about": "About",
   "our_services": "Our Services",
   "News": "News",
+  "readmore": "Read More",
   "contactus": "Contact Us",
+  "copyright": "Copyright © 2024 The Green Life Company, All Rights Reserved",
   "content": {
     "linetitle": "Pioneers in Environmental Sustainability",
     "title_experts": "Pioneers in Environmental Sustainability",
@@ -365,13 +367,13 @@
     "1": {
       "type": "News",
       "title": "Monitoring emissions in collaboration with the Ministry of Environment and the Environmental Police Agency.",
-      "paragraph": "Green Life Company, in collaboration with the Ministry of Environment and the Environmental Police, has implemented a project to monitor emissions resulting from the recent volcanic eruption in Sicily, Italy. The project involves deploying advanced air quality monitoring systems in various strategic locations in Tripoli to ensure accurate and effective monitoring of potential emissions. Field teams have been equipped with the latest technologies and advanced devices, including portable air monitoring equipment and drones, to ensure comprehensive coverage and precise analysis of environmental data. This effort aims to protect the environment and the health of citizens from the potential harmful effects of the volcanic eruption. Green Life Company reaffirms its commitment to preserving the environment and providing advanced environmental solutions in cooperation with government agencies to ensure a healthy and clean environment for all."
+      "paragraph_1": "Green Life Company, in collaboration with the Ministry of Environment and the Environmental Police, has implemented a project to monitor emissions resulting from the recent volcanic eruption in Sicily, Italy. The project involves deploying advanced air quality monitoring systems in various strategic locations in Tripoli to ensure accurate and effective monitoring of potential emissions. Field teams have been equipped with the latest technologies and advanced devices, including portable air monitoring equipment and drones, to ensure comprehensive coverage and precise analysis of environmental data. This effort aims to protect the environment and the health of citizens from the potential harmful effects of the volcanic eruption. Green Life Company reaffirms its commitment to preserving the environment and providing advanced environmental solutions in cooperation with government agencies to ensure a healthy and clean environment for all."
     },
     "2": {
       "type": "News",
       "image": ".../assets/images/big/1.jpg",
       "title": "Green Life Environmental Studies Company Supports Environmental Recovery Efforts After Hurricane Daniel",
-      "paragraph": "Green Life Environmental Studies Company is proud to announce its pivotal role in supporting the city of Derna after Hurricane Daniel struck the city on September 9th. Through our Integrated Analysis Laboratory, our specialized teams have conducted precise measurements of air and water pollution, as well as comprehensive analyses of soil, water, and air in the affected areas.",
+      "paragraph_1": "Green Life Environmental Studies Company is proud to announce its pivotal role in supporting the city of Derna after Hurricane Daniel struck the city on September 9th. Through our Integrated Analysis Laboratory, our specialized teams have conducted precise measurements of air and water pollution, as well as comprehensive analyses of soil, water, and air in the affected areas.",
       "paragraph_2": "These efforts reflect our firm commitment to preserving the environment and supporting local communities in times of crisis. Our Integrated Laboratory is a crucial asset in providing accurate analyses that help understand and assess the environmental situation after the disaster, enabling us to offer sustainable solutions for rehabilitating the local environment.",
       "paragraph_3": "At Green Life, we continue to work with dedication to enhance environmental balance and contribute to the recovery and reconstruction efforts in Derna. We believe that collaboration with relevant authorities and local communities is key to achieving sustainable environmental recovery, and we look forward to continuing to offer our expertise to support relief and rebuilding efforts."
     }

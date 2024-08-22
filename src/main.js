@@ -11,6 +11,7 @@ import SerCom from './components/SerCom.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ButtomHover from './components/ButtomHover.vue'
+import NewsCom from './components/NewsCom.vue'
 import VeeValidatePlugin from "@/includes/validation"
 
 import {
@@ -35,6 +36,7 @@ app.component('font-awesome-icon', FontAwesomeIcon)
 app.component('ButtomMain', ButtomMain)
 app.component('SerCom', SerCom)
 app.component('ButtomHover', ButtomHover)
+app.component('NewsCom', NewsCom)
 
 
 app.use(createPinia())

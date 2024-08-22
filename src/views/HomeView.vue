@@ -61,7 +61,7 @@
               {{ $t(`news.${index + 1}.title`) }}
             </p>
             <p class="leading-loose text-gray-500 text-justify line-clamp-3">
-              {{ $t(`news.${index + 1}.paragraph`) }}
+              {{ $t(`news.${index + 1}.paragraph_`) }}
             </p>
           </div>
         </div>

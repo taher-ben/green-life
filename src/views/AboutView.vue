@@ -28,11 +28,10 @@
         {{ $t('content.aboutpage.paragraph_2') }}
 
       </p>
-      <h3 class="text-xl">        {{ $t('content.aboutpage.paragraphtitle_3') }}
+      <h3 class="text-xl">{{ $t('content.aboutpage.paragraphtitle_3') }}
       </h3>
       <p class="pt-3">
         {{ $t('content.aboutpage.paragraph_3') }}
-
       </p>
     </div>
     <div>
@@ -76,7 +75,5 @@
   </div>
 </template>
 <script>
-// import { RouterLink } from 'vue-router';
-
 export default {}
 </script>
