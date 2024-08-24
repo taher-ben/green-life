@@ -44,7 +44,7 @@
           </ul>
           <ul class="list-disc list-inside">
             <h5 class="font-bold">{{ $t('content.Accreditation.section_6_title') }}</h5>
-            <li>{{ $t('content.content.Accreditation.section_6_item_1') }}</li>
+            <li>{{ $t('content.Accreditation.section_6_item_1') }}</li>
             <li>{{ $t('content.Accreditation.section_6_item_2') }}</li>
           </ul>
         </div>

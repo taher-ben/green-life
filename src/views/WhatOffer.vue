@@ -9,7 +9,7 @@
           {{ $t('whatoffer.headparagraph') }}
         </p>
       </div>
-      <div class="relative top-[45px]">
+      <div class="relative lg:w-10/12 mx-auto top-[45px]">
         <img src="../assets/background2.jpg" alt="" />
       </div>
     </div>
