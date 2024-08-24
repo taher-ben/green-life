@@ -14,47 +14,64 @@
                 {{ $t('content.ContactUs.description') }}
               </p>
             </div>
-            <vee-form>
+            <form @submit.prevent="sendEmail">
               <div class="flex flex-col lg:w-8/12 w-full">
                 <div class="mt-3">
-                  <label for="name" class="block capitalize text-sm font-medium text-slate-700">
-                    {{ $t('content.ContactUs.name_label') }}
+                  <label
+                    for="firstName"
+                    class="block capitalize text-sm font-medium text-slate-700"
+                  >
+                    {{ $t('content.ContactUs.firstName_label') }}
                   </label>
-                  <vee-field
-                    name="name"
+                  <input
+                    v-model="formData.firstName"
+                    name="firstName"
                     type="text"
-                    class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                  />
+                </div>
+                <div class="mt-3">
+                  <label for="lastName" class="block capitalize text-sm font-medium text-slate-700">
+                    {{ $t('content.ContactUs.lastName_label') }}
+                  </label>
+                  <input
+                    v-model="formData.lastName"
+                    name="lastName"
+                    type="text"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                   />
                 </div>
                 <div class="mt-3">
                   <label for="email" class="block text-sm capitalize font-medium text-slate-700">
                     {{ $t('content.ContactUs.email_label') }}
                   </label>
-                  <vee-field
+                  <input
+                    v-model="formData.email"
                     name="email"
                     type="email"
-                    class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                   />
                 </div>
                 <div class="mt-3">
                   <label for="message" class="block text-sm capitalize font-medium text-slate-700">
                     {{ $t('content.ContactUs.message_label') }}
                   </label>
-                  <vee-field
+                  <textarea
+                    v-model="formData.message"
                     name="message"
-                    class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                  ></vee-field>
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                  ></textarea>
                 </div>
               </div>
               <div>
                 <button
                   type="submit"
-                  class="px-6 py-2 my-4 text-transparent bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full capitalize"
+                  class="px-6 py-2 my-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full capitalize"
                 >
                   {{ $t('content.ContactUs.send_button') }}
                 </button>
               </div>
-            </vee-form>
+            </form>
           </div>
           <div class="mx-auto w-full xl:h-full h-96">
             <iframe
@@ -86,8 +103,12 @@
               />
               <div class="ps-4">
                 <h4 class="black text-xl">{{ $t('content.ContactUs.phone_title') }}</h4>
-                <p class="capitalize text-lg">{{ $t('content.ContactUs.phone_value_1') }}</p>
-                <p class="capitalize text-lg">{{ $t('content.ContactUs.phone_value_2') }}</p>
+                <p dir="rtl" class="capitalize text-lg">
+                  {{ $t('content.ContactUs.phone_value_1') }}
+                </p>
+                <p dir="rtl" class="capitalize text-lg">
+                  {{ $t('content.ContactUs.phone_value_2') }}
+                </p>
               </div>
             </div>
             <div class="flex lg:flex-row flex-col w-full justify-center items-center">
@@ -108,7 +129,45 @@
 </template>
 
 <script>
+import emailjs from 'emailjs-com'
+
 export default {
-  name: 'content.ContactUs'
+  data() {
+    return {
+      formData: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+      }
+    }
+  },
+  methods: {
+    sendEmail() {
+      const templateParams = {
+        from_name: `${this.formData.firstName} ${this.formData.lastName}`,
+        from_email: this.formData.email,
+        message: this.formData.message
+      }
+
+      emailjs
+        .send(
+          'service_d2a93sm', // استبدل بـ service_id الخاص بك
+          'template_ahe42tg', // استبدل بـ template_id الخاص بك
+          templateParams,
+          'eQsb8SHmph9Xu40HfYURO' // معرف المستخدم العام، يمكنك الاحتفاظ بهذا أو تغييره إذا كان لديك معرف مختلف
+        )
+        .then(
+          (response) => {
+            console.log('SUCCESS!', response.status, response.text)
+            alert('تم إرسال رسالتك بنجاح!')
+          },
+          (error) => {
+            console.error('FAILED...', error)
+            alert('حدث خطأ أثناء إرسال رسالتك.')
+          }
+        )
+    }
+  }
 }
 </script>

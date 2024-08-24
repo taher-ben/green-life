@@ -58,10 +58,10 @@
         >
           <div class="w-10/12">
             <p class="text-2xl pb-8 text-black">
-              {{ $t(`news.${index + 1}.title`) }}
+              {{ $t(`news.${index}.title`) }}
             </p>
             <p class="leading-loose text-gray-500 text-justify line-clamp-3">
-              {{ $t(`news.${index + 1}.paragraph_`) }}
+              {{ $t(`news.${index}.paragraph_1`) }}
             </p>
           </div>
         </div>
@@ -210,18 +210,7 @@
 import { ref } from 'vue'
 import MainSlid from '../components/MainSlider.vue'
 
-const boxes = ref([
-  {
-    title: 'To make The title more convincing',
-    content:
-      'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper.'
-  },
-  {
-    title: 'To makdde The title more convincing',
-    content:
-      'Green hydrogen is particularly vulnerable to price shocks from critical minerals, but this risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper. This risk is largely overlooked by its developers. Explore mitigation strategies in a new MCEP whitepaper.'
-  }
-])
+const boxes = ref([{}, {}])
 
 const currentBoxIndex = ref(0)
 // Functions to navigate slider

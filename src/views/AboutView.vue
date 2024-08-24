@@ -6,9 +6,9 @@
       <img src="../assets/background.jpg" alt="" />
       <div>
         <div class="absolute z-20 top-0 flex items-center h-fit p-8">
-          <RouterLink  to="/WhatOffer" class="text-white text-xl">
+          <RouterLink to="/WhatOffer" class="text-white text-xl">
             {{ $t('content.aboutpage.titlepage') }}
-          </RouterLink >
+          </RouterLink>
         </div>
       </div>
     </div>
@@ -26,51 +26,35 @@
       </h3>
       <p class="pt-3">
         {{ $t('content.aboutpage.paragraph_2') }}
-
       </p>
-      <h3 class="text-xl">{{ $t('content.aboutpage.paragraphtitle_3') }}
-      </h3>
+      <h3 class="text-xl">{{ $t('content.aboutpage.paragraphtitle_3') }}</h3>
       <p class="pt-3">
         {{ $t('content.aboutpage.paragraph_3') }}
       </p>
     </div>
     <div>
       <div class="bg-blue-300 mb-2 p-4">
-        <h2 class="text-white text-2xl font-bold">{{ $t('content.aboutpage.isotitle') }} <span class="text-green-600">{{ $t('content.aboutpage.Documents') }}</span>
+        <h2 class="text-white text-2xl font-bold">
+          {{ $t('content.aboutpage.isotitle') }}
+          <span class="text-green-600">{{ $t('content.aboutpage.Documents') }}</span>
         </h2>
-        <RouterLink to="Accreditation" >
-        <h3 class="text-white text-xl"> ISO <span class="text-green-600">14001:2015</span> </h3>
-      </RouterLink>
+        <RouterLink to="Accreditation">
+          <h3 class="text-white text-xl">ISO <span class="text-green-600">14001:2015</span></h3>
+        </RouterLink>
       </div>
       <div class="bg-blue-300 p-8 text-white">
-      <img class="w-32 pb-2" src="../assets/icons/Sustainability.png" alt="" />
-      <h3 class="text-xl py-2 font-bold">{{ $t('content.aboutpage.sustainable') }}</h3>
-      <p>
-        {{ $t('content.aboutpage.sustainable_paragph') }}
-      </p>
-    </div>
+        <img class="w-32 pb-2" src="../assets/icons/Sustainability.png" alt="" />
+        <h3 class="text-xl py-2 font-bold">{{ $t('content.aboutpage.sustainable') }}</h3>
+        <p>
+          {{ $t('content.aboutpage.sustainable_paragph') }}
+        </p>
+      </div>
     </div>
   </div>
   <div class="w-5/6 mx-auto">
     <h3 class="text-2xl text-blue-300 mb-2">{{ $t('content.aboutpage.projectandnews') }}</h3>
     <div>
-      <div class="grid lg:grid-cols-3 grid-cols-1 gap-8">
-        <div class="box">
-                <img src=../assets/background2.jpg alt="">
-                <data value="" class="text-gray-400">2024-06-20</data>
-                <h3 class=" hover:underline underline-offset-3 text-black font-semibold">
-                    How to make title
-                </h3>
-                <p class="line-clamp-1">
-                    This pargraph may do nothing
-                    This pargraph may do nothing
-                    This pargraph may do nothing
-                </p>
-                <div class="py-4 text-green-600 hover:text-gray-300">
-                    <ButtomHover link="/" Hovertext="textHover" />
-                </div>
-            </div>
-      </div>
+      <div class="grid lg:grid-cols-3 grid-cols-1 gap-8"></div>
     </div>
   </div>
 </template>

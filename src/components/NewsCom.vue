@@ -10,20 +10,23 @@
         </p>
       </div>
       <div class="relative top-[45px]">
-        <img :src="`../assets/background${id}.jpg`" alt="" />
+        <img :src="images[id]" alt="" />
       </div>
     </div>
-    <div class="pt-8 lg:w-[60rem] container mx-auto">
-      <p v-for="(text, index) in propr" :key="index">
+    <div class="py-16 lg:w-[60rem] container mx-auto">
+      <p class="py-2" v-for="(text, index) in propr" :key="index">
         {{ $t(`news.${id}.paragraph_${text}`) }}
       </p>
     </div>
   </div>
 </template>
 <script>
+import background1 from '../assets/images/big/4.jpg'
+import background2 from '../assets/images/big/2.jpg'
 export default {
   data() {
     return {
+      images: [background2, background1],
       propr: null
     }
   },

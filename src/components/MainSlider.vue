@@ -7,8 +7,8 @@
       >
         <div class="w-full">
           <picture>
-            <img class="w-full md:hidden block" src="../assets/images/small/7.jpg " />
-            <img class="h-full md:block hidden" src="../assets/images/big/7.jpg" />
+            <img class="w-full md:hidden block" src="../assets/images/small/2.jpg " />
+            <img class="h-full md:block hidden" src="../assets/images/big/2.jpg" />
           </picture>
         </div>
         <div class="w-full">
@@ -19,8 +19,8 @@
         </div>
         <div class="w-full">
           <picture>
-            <img class="w-full md:hidden block" src="../assets/images/small/2.jpg" />
-            <img class="h-full md:block hidden" src="../assets/images/big/2.jpg" />
+            <img class="w-full md:hidden block" src="../assets/images/small/4.jpg" />
+            <img class="h-full md:block hidden" src="../assets/images/big/4.jpg" />
           </picture>
         </div>
       </div>

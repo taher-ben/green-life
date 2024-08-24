@@ -24,36 +24,37 @@
     <h3 class="py-16 text-green-500 font-bold text-xl">{{ $t('NewsAndSubject.titlepage') }}</h3>
     <div class="grid md:grid-cols-3 grid-cols-1 gap-8">
       <div class="box">
-        <img src="../assets/background.jpg" alt="" />
-        <h3 class="hover:underline underline-offset-3 text-black font-semibold">
-          {{ $t('NewsAndSubject.paragraphtitle_2') }}
+        <img src="../assets/images/big/2.jpg" alt="" />
+
+        <h3 class="hover:underline underline-offset-3 pb-4 text-black font-semibold">
+          {{ $t(`news.0.title`) }}
         </h3>
         <p class="line-clamp-1">
-          {{ $t('NewsAndSubject.paragraph_2') }}
+          {{ $t(`news.1.paragraph_1`) }}
         </p>
         <div class="py-4 text-green-600 hover:text-gray-300">
           <RouterLink
             :to="{
               name: 'NewsCom',
-              params: { id: '1', ed: 1, pro: 1 }
+              params: { id: '0', pro: '1' }
             }"
             >{{ $t('readmore') }}</RouterLink
           >
         </div>
       </div>
       <div class="box">
-        <img src="../assets/background.jpg" alt="" />
-        <h3 class="hover:underline underline-offset-3 text-black font-semibold">
-          {{ $t('NewsAndSubject.paragraphtitle_2') }}
+        <img src="../assets/images/big/4.jpg" alt="" />
+        <h3 class="hover:underline underline-offset-3 pb-4 text-black font-semibold">
+          {{ $t(`news.1.title`) }}
         </h3>
         <p class="line-clamp-1">
-          {{ $t('NewsAndSubject.paragraph_2') }}
+          {{ $t(`news.1.paragraph_1`) }}
         </p>
         <div class="py-4 text-green-600 hover:text-gray-300">
           <RouterLink
             :to="{
               name: 'NewsCom',
-              params: { id: '1', pro: 3 }
+              params: { id: '1', pro: '3' }
             }"
             >{{ $t('readmore') }}</RouterLink
           >
@@ -63,4 +64,11 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {}
+  },
+  computed: {}
+}
+</script>

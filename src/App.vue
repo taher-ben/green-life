@@ -120,8 +120,6 @@
   </footer>
 </template>
 
-<script setup></script>
-
 <script>
 export default {
   data() {
@@ -132,6 +130,10 @@ export default {
   methods: {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen
+    },
+    changeLanguage(lang) {
+      this.$i18n.locale = lang
+      localStorage.setItem('selectedLanguage', lang)
     }
   }
 }
