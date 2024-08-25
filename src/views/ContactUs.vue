@@ -10,42 +10,18 @@
               >
                 {{ $t('content.ContactUs.title') }}
               </h3>
-              <p>
-                {{ $t('content.ContactUs.description') }}
-              </p>
+              <p>{{ $t('content.ContactUs.description') }}</p>
             </div>
             <form @submit.prevent="sendEmail">
               <div class="flex flex-col lg:w-8/12 w-full">
-                <div class="mt-3">
-                  <label
-                    for="firstName"
-                    class="block capitalize text-sm font-medium text-slate-700"
-                  >
-                    {{ $t('content.ContactUs.firstName_label') }}
+                <div class="mt-3" v-for="(label, key) in formLabels" :key="key">
+                  <label :for="key" class="block capitalize text-sm font-medium text-slate-700">
+                    {{ label }}
                   </label>
                   <input
-                    name="firstName"
+                    :name="key"
                     type="text"
-                    class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-                  />
-                </div>
-                <div class="mt-3">
-                  <label for="lastName" class="block capitalize text-sm font-medium text-slate-700">
-                    {{ $t('content.ContactUs.lastName_label') }}
-                  </label>
-                  <input
-                    name="lastName"
-                    type="text"
-                    class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-                  />
-                </div>
-                <div class="mt-3">
-                  <label for="email" class="block text-sm capitalize font-medium text-slate-700">
-                    {{ $t('content.ContactUs.email_label') }}
-                  </label>
-                  <input
-                    name="email"
-                    type="email"
+                    v-model="formData[key]"
                     class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                   />
                 </div>
@@ -55,6 +31,7 @@
                   </label>
                   <textarea
                     name="message"
+                    v-model="formData.message"
                     class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                   ></textarea>
                 </div>
@@ -114,7 +91,7 @@
               />
               <div class="ps-4">
                 <h4 class="black text-xl">{{ $t('content.ContactUs.email_title') }}</h4>
-                <p class="capitalize text-lg">{{ $t('content.ContactUs.email_value') }}</p>
+                <!-- <p class="capitalize text-lg">{{ $t('content.ContactUs.email_value') }}</p> -->
               </div>
             </div>
           </div>
@@ -125,44 +102,64 @@
 </template>
 
 <script>
-// import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com'
 
-// export default {
-//   data() {
-//     return {
-//       formData: {
-//         firstName: '',
-//         lastName: '',
-//         email: '',
-//         message: ''
-//       }
-//     }
-//   },
-//   methods: {
-//     sendEmail() {
-//       const templateParams = {
-//         from_name: `${this.formData.firstName} ${this.formData.lastName}`,
-//         from_email: this.formData.email,
-//         message: this.formData.message
-//       }
-//       emailjs
-//         .send(
-//           'service_d2a93sm', // استبدل بـ service_id الخاص بك
-//           'template_ahe42tg', // استبدل بـ template_id الخاص بك
-//           templateParams,
-//           'eQsb8SHmph9Xu40HfYURO' // معرف المستخدم العام، يمكنك الاحتفاظ بهذا أو تغييره إذا كان لديك معرف مختلف
-//         )
-//         .then(
-//           (response) => {
-//             console.log('SUCCESS!', response.status, response.text)
-//             alert('تم إرسال رسالتك بنجاح!')
-//           },
-//           (error) => {
-//             console.error('FAILED...', error)
-//             alert('حدث خطأ أثناء إرسال رسالتك.')
-//           }
-//         )
-//     }
-//   }
-// }
+export default {
+  name: 'contactView',
+  data() {
+    return {
+      formData: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+      },
+      formLabels: {
+        firstName: this.$t('content.ContactUs.firstName_label'),
+        lastName: this.$t('content.ContactUs.lastName_label'),
+        email: this.$t('content.ContactUs.email_label')
+      }
+    }
+  },
+  methods: {
+    validateForm() {
+      if (
+        !this.formData.firstName ||
+        !this.formData.lastName ||
+        !this.formData.email ||
+        !this.formData.message
+      ) {
+        alert(this.$t('content.ContactUs.validation_error'))
+        return false
+      }
+      return true
+    },
+    sendEmail() {
+      if (!this.validateForm()) return
+
+      const templateParams = {
+        to_name:
+          'This message is from the Amaq Company website. Kindly check it at your earliest convenience.',
+        from_name: `${this.formData.firstName} ${this.formData.lastName}`,
+        message: this.formData.message,
+        reply_to: this.formData.email
+      }
+
+      emailjs.send('service_09ecx97', 'template_5wjqj9s', templateParams, 'mmzt7u0dVwpCYs9Xz').then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text)
+          alert(this.$t('content.ContactUs.success_message'))
+        },
+        (error) => {
+          console.error('FAILED...', error)
+          alert(this.$t('content.ContactUs.error_message'))
+        }
+      )
+    }
+  }
+}
 </script>
+
+<style scoped>
+/* Add any scoped CSS here */
+</style>

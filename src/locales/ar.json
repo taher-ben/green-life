@@ -1,4 +1,8 @@
 {
+  "Error_404": "خطأ 404",
+  "notfound": "لم يتم العثور على الصفحة",
+  "notfountext": "الصفحة التي تبحث عنها غير موجودة.",
+
   "home": "الصفحة الرئيسية",
   "about": "من نحن",
   "our_services": "خدماتنا",
@@ -63,7 +67,9 @@
       "phone_value_1": "+218 91 217 0803",
       "phone_value_2": "+218 91 217 0803",
       "email_title": "البريد الإلكتروني",
-      "email_value": "info@greenlife.ly"
+      "email_value": "info@greenlife.ly",
+      "success_message": "تم الارسال ",
+      "error_message": "لم يتم الارسال"
     }
   },
   "NewsAndSubject": {

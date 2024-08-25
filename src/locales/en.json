@@ -1,4 +1,7 @@
 {
+  "Error_404": "Error 404",
+  "notfound": "Page not found",
+  "notfountext": "The page you’re looking for doesn’t exist.",
   "home": "Home",
   "about": "About",
   "our_services": "Our Services",
@@ -63,7 +66,9 @@
       "phone_value_1": "+218 91 217 0803",
       "phone_value_2": "+218 91 217 0803",
       "email_title": "Email",
-      "email_value": "info@greenlife.ly"
+      "email_value": "info@greenlife.ly",
+      "success_message": "Sent",
+      "error_message": "Not sent"
     }
   },
   "NewsAndSubject": {

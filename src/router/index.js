@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory  } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import NotFound from '../views/NotFound.vue'
 import DoctorsCv from '../components/DoctorsCv.vue'
 import NewsCom from '../components/NewsCom.vue'
 
@@ -10,6 +11,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: NotFound
     },
     {
       path: '/ourteam/:id/:ed/:pro',
