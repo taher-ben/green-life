@@ -52,7 +52,7 @@
     </div>
   </div>
   <div class="w-5/6 mx-auto">
-    <h3 class="text-2xl text-blue-300 mb-2">{{ $t('content.aboutpage.projectandnews') }}</h3>
+    <!-- <h3 class="text-2xl text-blue-300 mb-2">{{ $t('content.aboutpage.projectandnews') }}</h3> -->
     <div>
       <div class="grid lg:grid-cols-3 grid-cols-1 gap-8"></div>
     </div>
