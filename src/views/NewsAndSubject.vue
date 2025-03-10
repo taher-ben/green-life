@@ -60,6 +60,24 @@
           >
         </div>
       </div>
+      <div class="box">
+        <img src="../assets/images/big/10.jpg" alt="" />
+        <h3 class="hover:underline underline-offset-3 pb-4 text-black font-semibold">
+          {{ $t(`news.2.title`) }}
+        </h3>
+        <p class="line-clamp-1">
+          {{ $t(`news.2.paragraph_1`) }}
+        </p>
+        <div class="py-4 text-green-600 hover:text-gray-300">
+          <RouterLink
+            :to="{
+              name: 'NewsCom',
+              params: { id: '2', pro: '3' }
+            }"
+            >{{ $t('readmore') }}</RouterLink
+          >
+        </div>
+      </div>
     </div>
   </div>
 </template>

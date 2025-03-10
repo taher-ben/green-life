@@ -7,6 +7,12 @@
       >
         <div class="w-full">
           <picture>
+            <img class="w-full md:hidden block" src="../assets/images/small/10.jpg" />
+            <img class="h-full md:block hidden" src="../assets/images/big/10.jpg" />
+          </picture>
+        </div>
+        <div class="w-full">
+          <picture>
             <img class="w-full md:hidden block" src="../assets/images/small/2.jpg " />
             <img class="h-full md:block hidden" src="../assets/images/big/2.jpg" />
           </picture>
@@ -27,7 +33,7 @@
       <div class="overflow-x-auto md:absolute md:bottom-0 md:overflow-hidden slideNumerContainer">
         <div class="flex w-max md:min-w-[1500px]">
           <div
-            v-for="(item, index) in 3"
+            v-for="(item, index) in 4"
             :key="index"
             @click="show(index)"
             :class="{
@@ -38,7 +44,7 @@
           >
             <div>
               <span>{{ index + 1 }}</span
-              ><span class="opinter">/3</span>
+              ><span class="opinter">/4</span>
             </div>
             <h5 class="text-white text-sm">{{ $t(`titles_for_slider.${index + 1}`) }}</h5>
           </div>
@@ -63,7 +69,7 @@ const show = (index) => {
 const updateWidth = () => {
   if (wid.value) {
     const width = wid.value.offsetWidth
-    nextWidth.value = width * 3
+    nextWidth.value = width * 4
   }
   show(0)
 }
@@ -82,7 +88,7 @@ onMounted(() => {
   updateWidth()
   window.addEventListener('resize', updateWidth)
 
-  const intervalId = setInterval(nextSlide, 5000)
+  const intervalId = setInterval(nextSlide, 6000)
 
   onUnmounted(() => {
     clearInterval(intervalId)
@@ -108,7 +114,7 @@ onMounted(() => {
   position: absolute;
   width: 100%;
   transition: 1s;
-  height: 1px;
+  /* height: 1px; */
   top: 0;
   left: -100%;
 }

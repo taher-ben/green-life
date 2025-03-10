@@ -83,9 +83,10 @@
     "buttontitle_2": "Read More"
   },
   "titles_for_slider": {
-    "1": "Joint emissions monitoring with environmental authorities.",
-    "2": "Green Life Laboratories for Advanced Environmental Research",
-    "3": "Environmental recovery support post-Hurricane Daniel."
+    "1": "Green Life Environmental Studies Company Conducts a Comprehensive Study on Air Quality in the City of Al-Asabi’a.",
+    "2": "Joint emissions monitoring with environmental authorities.",
+    "3": "Green Life Laboratories for Advanced Environmental Research",
+    "4": "Environmental recovery support post-Hurricane Daniel."
   },
   "experts": {
     "Dr_Najib_Ali_Bishr": {
@@ -383,6 +384,14 @@
       "paragraph_1": "Green Life Environmental Studies Company is proud to announce its pivotal role in supporting the city of Derna after Hurricane Daniel struck the city on September 9th. Through our Integrated Analysis Laboratory, our specialized teams have conducted precise measurements of air and water pollution, as well as comprehensive analyses of soil, water, and air in the affected areas.",
       "paragraph_2": "These efforts reflect our firm commitment to preserving the environment and supporting local communities in times of crisis. Our Integrated Laboratory is a crucial asset in providing accurate analyses that help understand and assess the environmental situation after the disaster, enabling us to offer sustainable solutions for rehabilitating the local environment.",
       "paragraph_3": "At Green Life, we continue to work with dedication to enhance environmental balance and contribute to the recovery and reconstruction efforts in Derna. We believe that collaboration with relevant authorities and local communities is key to achieving sustainable environmental recovery, and we look forward to continuing to offer our expertise to support relief and rebuilding efforts."
+    },
+    "2": {
+      "type": "News",
+      "title": "Green Life Environmental Studies Company Conducts a Comprehensive Study on Air Quality in the City of Al-Asabi’a.",
+      "num": "3",
+      "paragraph_1": "Green Life Environmental Studies Company conducted a comprehensive field study on air quality in the city of Al-Asabi’a, following recent events in the area, where a series of mysterious fires broke out, impacting the environmental and health conditions of the residents.",
+      "paragraph_2": "The study included extensive measurements within the city and around the local waste disposal site, utilizing the latest technologies and specialized equipment to collect and analyze environmental data with high precision. The primary goal of this study is to provide a comprehensive assessment of air quality, which will assist relevant authorities in making informed decisions to mitigate environmental risks and promote sustainability.",
+      "paragraph_3": "Green Life Environmental Studies Company reaffirms its ongoing commitment to providing advanced environmental solutions and supporting government efforts by delivering accurate data and analytical reports that contribute to improving environmental quality in the city of Al-Asabi’a."
     }
   },
   "contents": {

@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="relative top-[45px]">
-        <img :src="images[id]" alt="" />
+        <img :src="`../../image/big/${id}.jpg`" alt="" />
       </div>
     </div>
     <div class="py-16 lg:w-[60rem] container mx-auto">
@@ -21,12 +21,9 @@
   </div>
 </template>
 <script>
-import background1 from '../assets/images/big/4.jpg'
-import background2 from '../assets/images/big/2.jpg'
 export default {
   data() {
     return {
-      images: [background2, background1],
       propr: null
     }
   },
@@ -40,7 +37,7 @@ export default {
   },
   props: {
     id: {
-      type: String,
+      type: Number,
       required: true
     },
     pro: {

@@ -91,7 +91,7 @@
               />
               <div class="ps-4">
                 <h4 class="black text-xl">{{ $t('content.ContactUs.email_title') }}</h4>
-                <!-- <p class="capitalize text-lg">{{ $t('content.ContactUs.email_value') }}</p> -->
+                <p class="capitalize text-lg">{{ $t('content.ContactUs.email_value') }}</p>
               </div>
             </div>
           </div>

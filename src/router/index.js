@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory  } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import NotFound from '../views/NotFound.vue'
 import DoctorsCv from '../components/DoctorsCv.vue'
@@ -21,13 +21,13 @@ const router = createRouter({
       path: '/ourteam/:id/:ed/:pro',
       name: 'DoctorsCv',
       component: DoctorsCv,
-      props:true
+      props: true
     },
     {
       path: '/NewsCom/:id/:pro',
       name: 'NewsCom',
       component: NewsCom,
-      props:true
+      props: true
     },
     {
       path: '/WhatOffer',
@@ -82,7 +82,6 @@ const router = createRouter({
       name: 'ServicesEC',
       component: () => import('../views/OurServices/ServicesEC.vue')
     }
-    
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
